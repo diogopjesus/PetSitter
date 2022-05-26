@@ -51,7 +51,7 @@
 
     </TextView>
 
-    <TextView
+    <EditText
         android:id="@+id/textView3"
         android:layout_width="311dp"
         android:layout_height="48dp"
@@ -65,7 +65,7 @@
         tools:layout_editor_absoluteY="305dp"
         tools:ignore="MissingConstraints" />
 
-    <TextView
+    <EditText
         android:id="@+id/textView4"
         android:layout_width="311dp"
         android:layout_height="48dp"
@@ -79,7 +79,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login_btn"
         android:layout_width="311dp"
         android:layout_height="48dp"
