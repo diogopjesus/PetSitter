@@ -109,17 +109,29 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="276dp"
+        android:layout_width="200dp"
         android:layout_height="22dp"
         android:layout_marginTop="30dp"
-        android:text="Don’t have an account? Sign up"
+        android:text="Don’t have an account?"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.34"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5">
+        app:layout_constraintTop_toBottomOf="@+id/textView5"></TextView>
 
-    </TextView>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signIn_btn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/light_sky_blue"
+        android:text="Sign In"
+        android:onClick="register"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.173"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 </androidx.constraintlayout.widget.ConstraintLayout>
