@@ -9,6 +9,4 @@
     <!-- This is the border color -->
     <stroke android:width="2dp" android:color="#DBDBDE" />
 
-
-
 </shape>

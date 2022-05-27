@@ -2,7 +2,9 @@ package com.example.petsitter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -11,7 +13,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-
     }
 
+    public void sigIn(View v){
+        Intent intent = new Intent(v.getContext(), SignInActivity.class);
+        startActivity(intent);
+    }
 }
