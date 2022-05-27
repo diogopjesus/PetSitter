@@ -8,7 +8,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
         android:background="@color/light_sky_blue"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-152dp"
@@ -26,7 +26,6 @@
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.259"
             tools:ignore="LabelFor,RtlSymmetry"
             tools:layout_editor_absoluteX="16dp" />
 
@@ -40,58 +39,41 @@
             app:srcCompat="@drawable/ic_baseline_search_24"
             tools:layout_editor_absoluteX="26dp" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/upComing_btn"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="50dp"
-            android:backgroundTint="@color/light_sky_blue"
-            android:text="Upcoming"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            app:layout_constraintTop_toBottomOf="@+id/textView10"
-            tools:layout_editor_absoluteX="16dp" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/ongoing_btn"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="48dp"
-            android:backgroundTint="@color/light_sky_blue"
-            android:text="Ongoing"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            app:layout_constraintTop_toBottomOf="@+id/textView10"
-            tools:layout_editor_absoluteX="155dp" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/ended_btn"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="48dp"
-            android:backgroundTint="@color/light_sky_blue"
-            android:text="Ended"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            app:layout_constraintTop_toBottomOf="@+id/textView10"
-            tools:layout_editor_absoluteX="295dp" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/light_sky_blue"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:tabIndicatorColor="@color/white"
+        app:tabTextColor="@color/white">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upcoming" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ongoing" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ended" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
+    </androidx.viewpager.widget.ViewPager>
 </androidx.constraintlayout.widget.ConstraintLayout>
