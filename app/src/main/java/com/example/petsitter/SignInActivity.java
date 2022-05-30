@@ -10,7 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class SignInActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class SignInActivity extends AppCompatActivity {
     Spinner spinner;
     ArrayAdapter<CharSequence> arrayAdapter;
     @Override
@@ -22,7 +22,6 @@ public class SignInActivity extends AppCompatActivity implements AdapterView.OnI
         arrayAdapter = ArrayAdapter.createFromResource(this,R.array.roles, android.R.layout.simple_spinner_item);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(arrayAdapter);
-        spinner.setOnItemSelectedListener(this);
     }
 
     public void onClickEvent(View v){
@@ -38,14 +37,4 @@ public class SignInActivity extends AppCompatActivity implements AdapterView.OnI
         }
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        String text = adapterView.getItemAtPosition(i).toString();
-        Toast.makeText(adapterView.getContext(),text,Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
-    }
 }
