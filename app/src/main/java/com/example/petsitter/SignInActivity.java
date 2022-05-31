@@ -38,7 +38,7 @@ public class SignInActivity extends AppCompatActivity {
 
     }
     public void onClickEvent(View v){
-        Intent intent = new Intent(v.getContext(),LoginActivity.class);
+        Intent intent = null;
         switch(v.getId()){
             case R.id.createAccount_btn:
                 if (fName.getText().toString().equals("") || lName.getText().toString().equals("")
@@ -46,19 +46,19 @@ public class SignInActivity extends AppCompatActivity {
                             || reenter_password.getText().toString().equals("") || radioButton == null){
                     Toast.makeText(v.getContext(),"All options are required", Toast.LENGTH_SHORT).show();
                 }
-                else if(!password.equals(reenter_password)){
+                else if(!password.getText().toString().equals(reenter_password.getText().toString())){
                     Toast.makeText(v.getContext(),"Oi", Toast.LENGTH_SHORT).show();
                 }
                 else{
+                    intent = new Intent(v.getContext(),PetOwner_HomePage.class);
                     startActivity(intent);
                 }
                 break;
 
             case R.id.signUp_btn:
+                intent = new Intent(v.getContext(),LoginActivity.class);
                 startActivity(intent);
                 break;
         }
     }
-
-
 }
