@@ -50,7 +50,7 @@
             android:layout_marginStart="16dp"
             android:textColor="#4F4F4F"
             android:textSize="11sp"
-            android:text="Numero de candidatos:"/>
+            android:text="Number of appliers:"/>
 
         <ImageView
             android:layout_width="17dp"
