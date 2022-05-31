@@ -15,8 +15,17 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    public void sigIn(View v){
-        Intent intent = new Intent(v.getContext(), SignInActivity.class);
-        startActivity(intent);
+    public void onClickEvent(View v){
+        Intent intent = null;
+        switch(v.getId()) {
+            case R.id.login_btn:
+                intent = new Intent(v.getContext(),PetOwner_HomePage.class);
+                startActivity(intent);
+                break;
+            case R.id.signIn_btn:
+                intent = new Intent(v.getContext(),SignInActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 }

@@ -11,6 +11,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetSitter">
         <activity
+            android:name=".PetSittingRequest"
+            android:exported="false" />
+        <activity
+            android:name=".PetHostingRequest"
+            android:exported="false" />
+        <activity
+            android:name=".DogWalkingRequest"
+            android:exported="false" />
+        <activity
+            android:name=".PetOwner_HomePage"
+            android:exported="false" />
+        <activity
             android:name=".SignInActivity"
             android:exported="false" />
         <activity
