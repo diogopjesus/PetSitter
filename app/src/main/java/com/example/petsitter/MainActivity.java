@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    Intent intent = new Intent(getApplicationContext(),MyAnimals.class);
+                    Intent intent = new Intent(getApplicationContext(),PetOwner_HomePage.class);
                     startActivity(intent);
                 } catch (Exception e) {
                     e.printStackTrace();

@@ -11,14 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PetSitter">
         <activity
+            android:name=".PetOwnerRequests"
+            android:exported="false" />
+        <activity
             android:name=".AddAnimal"
             android:exported="false"
-            android:parentActivityName=".MyAnimals"
-            android:label="Add Animal"/>
+            android:label="Add Animal"
+            android:parentActivityName=".MyAnimals" />
         <activity
             android:name=".MyAnimals"
             android:exported="false"
-            android:label="My Animals"/>
+            android:label="My Animals" />
         <activity
             android:name=".PetSittingRequest"
             android:exported="false"

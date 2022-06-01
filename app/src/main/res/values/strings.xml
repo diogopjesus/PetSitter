@@ -1,4 +1,9 @@
 <resources>
+    <string name="app_name">PetSitter</string>
+    <string-array name="animals">
+        <item> Cat</item>
+        <item> Dog </item>
+    </string-array>
     <string-array name="cats_array">
         <item> The RagDoll</item>
         <item> Maine Coon</item>
@@ -12,7 +17,6 @@
         <item> Sphynx</item>
 
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
     <string-array name="dogs_array">
         <item> Spitz Alemão Anão</item>
         <item> Bulldog Francês</item>
@@ -24,5 +28,8 @@
         <item> Pastor Alemão</item>
         <item> Yorkshire terrier</item>
         <item> Border Collie</item>
+    </string-array>
+    <string-array name="regularity">
+        <item>Only this time</item>
     </string-array>
 </resources>

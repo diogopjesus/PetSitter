@@ -11,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class RecyclerViewMyAnimalsAdapter extends RecyclerView.Adapter<RecyclerViewMyAnimalsAdapter.MyViewHolder>{
     Context context;
     ArrayList<MyAnimalsModel> myAnimalsModel;
@@ -36,6 +38,12 @@ public class RecyclerViewMyAnimalsAdapter extends RecyclerView.Adapter<RecyclerV
 
         holder.animalType.setText(animalType);
         holder.animalName.setText(animalName);
+        if (animalType.equals("Cat")){
+            holder.animalImage.setImageResource(R.drawable.ic_cat);
+        }
+        else{
+            holder.animalImage.setImageResource(R.drawable.ic_dog);
+        }
     }
 
     @Override
@@ -46,11 +54,13 @@ public class RecyclerViewMyAnimalsAdapter extends RecyclerView.Adapter<RecyclerV
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
         TextView animalName, animalType;
+        CircleImageView animalImage;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
             animalName = itemView.findViewById(R.id.animalName);
             animalType = itemView.findViewById(R.id.animalType);
+            animalImage = itemView.findViewById(R.id.animalImage);
         }
     }
 }

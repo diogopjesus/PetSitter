@@ -47,7 +47,7 @@ public class PetOwner_HomePage extends AppCompatActivity {
 
                 break;
             case R.id.appCompatButton2:
-                intent = new Intent(getApplicationContext(), PetHostingRequest.class);
+                intent = new Intent(getApplicationContext(), PetOwnerRequests.class);
 
                 break;
             case R.id.appCompatButton3:
@@ -62,6 +62,6 @@ public class PetOwner_HomePage extends AppCompatActivity {
 
     public void setUpRequestsPetOwnerModels(){
         ArrayList<JSONObject> requestsDatabase = DB.getRequests();
-        String serviceType, animalName, time, nOfCandidates;
+
     }
 }

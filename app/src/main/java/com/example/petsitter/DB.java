@@ -95,7 +95,7 @@ public class DB implements Serializable  {
         return -1;
     }
 
-    public static int addDogWalkingEntry(String pet_owner, int pet_id, String details, LocalDate date, LocalTime time, String address) {
+    public static int addDogWalkingEntry(String pet_owner, int pet_id, String details, LocalDate date, LocalTime time, String regularity) {
         JSONObject entry = new JSONObject();
         entry.put("owner_contact", pet_owner);
         entry.put("type", 3);
@@ -103,7 +103,7 @@ public class DB implements Serializable  {
         entry.put("details", details);
         entry.put("date", date.toString());
         entry.put("time", time.toString());
-        entry.put("address", address);
+        entry.put("regularity", regularity);
         entry.put("status", 0);
         entry.put("chosen_candidate", null);
 
