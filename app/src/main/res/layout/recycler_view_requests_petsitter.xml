@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="130dp"
+    android:padding="10dp">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardView"
@@ -11,10 +12,9 @@
         android:layout_height="130dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.885"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.056">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/serviceType"
@@ -22,9 +22,9 @@
             android:layout_height="20dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="6dp"
+            android:text="Type of Request:"
             android:textColor="#4F4F4F"
-            android:textSize="14sp"
-            android:text="Type of Request:"/>
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/animalName"
@@ -32,9 +32,9 @@
             android:layout_height="20dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="28dp"
+            android:text="Animal's name:"
             android:textColor="#4F4F4F"
-            android:textSize="14sp"
-            android:text="Animal's name:"/>
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/animalType"
@@ -42,9 +42,9 @@
             android:layout_height="20dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="50dp"
+            android:text="Animal's type:"
             android:textColor="#4F4F4F"
-            android:textSize="14sp"
-            android:text="Animal's type:"/>
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/date"
