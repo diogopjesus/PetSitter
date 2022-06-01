@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#EAEAEA">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -14,12 +15,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button8"
                 android:layout_width="179dp"
                 android:layout_height="127dp"
-                android:backgroundTint="@color/white"
                 android:text="Add Animal Photo"
+                android:background="@drawable/rounded_corner_text_grey_white_background"
                 android:textColor="#4F4F4F"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -87,6 +88,7 @@
                 android:layout_width="330dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_corner_text_grey_white_background"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.419"
                 app:layout_constraintStart_toStartOf="parent"
@@ -100,7 +102,7 @@
                 android:hint="Animal Name"
                 android:paddingLeft="10dp"
                 android:textColorHint="#4F4F4F"
-                android:background="@drawable/rounded_corner_text_grey"
+                android:background="@drawable/rounded_corner_text_grey_white_background"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.419"
@@ -113,7 +115,7 @@
                 android:layout_width="330dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/rounded_corner_text_grey"
+                android:background="@drawable/rounded_corner_text_grey_white_background"
                 android:hint="Animal Size"
                 android:paddingLeft="10dp"
                 android:textColorHint="#4F4F4F"
@@ -143,6 +145,7 @@
                 android:layout_marginTop="16dp"
                 android:textColor="#4F4F4F"
                 android:textSize="20sp"
+                android:background="@drawable/rounded_corner_text_grey_white_background"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.419"
                 app:layout_constraintStart_toStartOf="parent"
@@ -161,7 +164,7 @@
                 android:maxLines="5"
                 android:textColorHint="#4F4F4F"
                 android:inputType="textMultiLine"
-                android:background="@drawable/rounded_corner_text_grey"
+                android:background="@drawable/rounded_corner_text_grey_white_background"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.419"
                 app:layout_constraintStart_toStartOf="parent"
@@ -172,7 +175,7 @@
                 android:layout_width="311dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="56dp"
-                android:background="@drawable/rounded_corner_text_grey"
+                android:background="@drawable/rounded_corner_text_grey_white_background"
                 android:onClick="onClickEvent"
                 android:text="Add Animal"
                 android:layout_marginBottom="20dp"

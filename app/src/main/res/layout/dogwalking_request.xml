@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#EAEAEA">
 
     <TextView
         android:id="@+id/textView8"
@@ -26,7 +27,7 @@
         android:layout_marginTop="20dp"
         android:textColor="#4F4F4F"
         android:textSize="20sp"
-        android:background="@drawable/rounded_corner_text_grey"
+        android:background="@drawable/rounded_corner_text_grey_white_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,9 +61,9 @@
 
     <EditText
         android:id="@+id/editTextDate"
+        android:background="@drawable/rounded_corner_text_grey_white_background"
         android:layout_width="98dp"
         android:layout_height="30dp"
-        android:background="@drawable/rounded_corner_text_grey"
         android:ems="10"
         android:inputType="date"
         android:textColor="#4F4F4F"
@@ -77,9 +78,9 @@
     <EditText
         android:id="@+id/editTextDate2"
         android:layout_width="98dp"
+        android:background="@drawable/rounded_corner_text_grey_white_background"
         android:layout_height="30dp"
         android:layout_marginEnd="112dp"
-        android:background="@drawable/rounded_corner_text_grey"
         android:ems="10"
         android:inputType="date"
         android:textColor="#4F4F4F"
@@ -108,7 +109,7 @@
         android:layout_width="330dp"
         android:layout_height="30dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/rounded_corner_text_grey"
+        android:background="@drawable/rounded_corner_text_grey_white_background"
         android:textColor="#4F4F4F"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -136,7 +137,7 @@
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:background="@drawable/rounded_corner_text_grey"
+        android:background="@drawable/rounded_corner_text_grey_white_background"
         android:textColor="#4F4F4F"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -149,7 +150,7 @@
         android:layout_width="311dp"
         android:layout_height="48dp"
         android:layout_marginTop="124dp"
-        android:background="@drawable/rounded_corner_text_grey"
+        android:background="@drawable/rounded_corner_text_grey_white_background"
         android:onClick="onClickEvent"
         android:text="Add Request"
         android:textColor="@color/sea_green_crayola"

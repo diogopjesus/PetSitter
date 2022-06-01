@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#EAEAEA">
 
     <TextView
         android:id="@+id/textView7"
@@ -11,18 +12,31 @@
         android:layout_height="25dp"
         android:text="How can we help you?"
         android:textAlignment="center"
+        android:textColor="#4F4F4F"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+    <View
+        android:layout_width="413dp"
+        android:layout_height="2dp"
+
+        android:layout_marginTop="12dp"
+        android:background="#4F4F4F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatButton2" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/appCompatButton1"
         android:layout_width="115dp"
         android:layout_height="115dp"
-        android:backgroundTint="@color/white"
+        android:background="@drawable/rounded_corner_text_grey_white_background"
         android:text="Dog Walking"
+        android:textColor="#4F4F4F"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.054"
@@ -36,23 +50,25 @@
         android:layout_width="115dp"
         android:layout_height="115dp"
         android:layout_marginStart="132dp"
-        android:backgroundTint="@color/white"
+        android:background="@drawable/rounded_corner_text_grey_white_background"
+        android:onClick="chooseRequestType"
         android:text="Pet Hosting"
+        android:textColor="#4F4F4F"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/appCompatButton1"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
-        app:layout_constraintVertical_bias="0.013"
-        android:onClick="chooseRequestType"/>
+        app:layout_constraintVertical_bias="0.013" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/appCompatButton3"
         android:layout_width="115dp"
         android:layout_height="115dp"
-        android:backgroundTint="@color/white"
+        android:background="@drawable/rounded_corner_text_grey_white_background"
         android:onClick="chooseRequestType"
         android:text="Pet Sitting"
+        android:textColor="#4F4F4F"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.515"
@@ -66,7 +82,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appCompatButton2"
-        app:layout_constraintVertical_bias="0.013"/>
+        app:layout_constraintVertical_bias="0.087"
+        tools:layout_editor_absoluteX="0dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
