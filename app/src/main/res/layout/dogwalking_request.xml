@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,7 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select animal(s)"
-        android:textColor="#a6a6a6"
+        android:fontFamily="@font/montserrat"
+        android:textColor="#4F4F4F"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,15 +21,15 @@
         app:layout_constraintVertical_bias="0.052" />
 
     <Spinner
-        android:id="@+id/animalsSpinner"
+        android:id="@+id/spinner"
         android:layout_width="330dp"
         android:layout_height="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/rounded_corner_text_grey"
         android:textColor="#a6a6a6"
         android:textSize="20sp"
-        android:background="@drawable/rounded_corner_text_grey"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -35,13 +37,14 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="24dp"
+        android:fontFamily="@font/montserrat"
         android:text="Date"
-        android:textColor="#a6a6a6"
+        android:textColor="#4F4F4F"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/animalsSpinner" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <TextView
         android:id="@+id/textView11"
@@ -50,35 +53,36 @@
         android:layout_marginStart="92dp"
         android:layout_marginTop="24dp"
         android:text="Time"
-        android:textColor="#a6a6a6"
+        android:fontFamily="@font/montserrat"
+        android:textColor="#4F4F4F"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/animalsSpinner" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <EditText
-        android:id="@+id/requestDate"
-        android:layout_width="98dp"
-        android:background="@drawable/rounded_corner_text_grey"
+        android:id="@+id/editTextDate"
+        android:layout_width="125dp"
         android:layout_height="30dp"
+        android:background="@drawable/rounded_corner_text_grey"
         android:ems="10"
         android:inputType="date"
         android:textColor="#a6a6a6"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/requestTime"
-        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintEnd_toStartOf="@+id/editTextDate2"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12"
-        app:layout_constraintVertical_bias="0.031" />
+        app:layout_constraintVertical_bias="0.018" />
 
     <EditText
-        android:id="@+id/requestTime"
-        android:layout_width="98dp"
-        android:background="@drawable/rounded_corner_text_grey"
+        android:id="@+id/editTextDate2"
+        android:layout_width="125dp"
         android:layout_height="30dp"
-        android:layout_marginEnd="112dp"
+        android:layout_marginEnd="88dp"
+        android:background="@drawable/rounded_corner_text_grey"
         android:ems="10"
         android:inputType="date"
         android:textColor="#a6a6a6"
@@ -86,27 +90,28 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11"
-        app:layout_constraintVertical_bias="0.031" />
+        app:layout_constraintVertical_bias="0.018" />
+
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat"
         android:text="Regularity"
-        android:textColor="#a6a6a6"
+        android:textColor="#4F4F4F"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/requestDate" />
-
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
 
     <Spinner
-        android:id="@+id/regularitySpinner"
+        android:id="@+id/spinner2"
         android:layout_width="330dp"
         android:layout_height="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/rounded_corner_text_grey"
         android:textColor="#a6a6a6"
         android:textSize="20sp"
@@ -121,39 +126,52 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Details"
-        android:textColor="#a6a6a6"
+        android:fontFamily="@font/montserrat"
+        android:textColor="#4F4F4F"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regularitySpinner" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
 
     <EditText
-        android:id="@+id/requestDetails"
+        android:id="@+id/editTextTextPersonName4"
         android:layout_width="330dp"
         android:layout_height="150dp"
-        android:layout_marginTop="20dp"
-        android:inputType="textMultiLine"
+        android:layout_marginTop="12dp"
         android:background="@drawable/rounded_corner_text_grey"
+        android:ems="10"
+        android:inputType="textPersonName"
         android:textColor="#a6a6a6"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
+    <View
+        android:layout_width="413dp"
+        android:layout_height="1dp"
+        android:background="#a6a6a6"
+        app:layout_constraintBottom_toTopOf="@+id/createAccount_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4"
+        app:layout_constraintVertical_bias="0.756" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/createAccount_btn"
-        android:layout_width="311dp"
+        android:layout_width="330dp"
         android:layout_height="48dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="120dp"
         android:background="@drawable/rounded_corner_text_light_blue"
+        android:fontFamily="@font/montserrat"
         android:onClick="onClickEvent"
         android:text="Add Request"
         android:textColor="@color/sea_green_crayola"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/requestDetails" />
-
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

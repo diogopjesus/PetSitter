@@ -24,6 +24,7 @@
             android:background="@drawable/rounded_corner_text"
             android:backgroundTint="@color/white"
             android:hint="Search request"
+            android:fontFamily="@font/montserrat"
             android:paddingLeft="30dp"
             android:textColorHint="#4F4F4F"
             android:textSize="14sp"
@@ -59,16 +60,19 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
             android:text="Upcoming" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
             android:text="Ongoing" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
             android:text="Ended" />
     </com.google.android.material.tabs.TabLayout>
 
