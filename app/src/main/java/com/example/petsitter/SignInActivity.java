@@ -3,6 +3,7 @@ package com.example.petsitter;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +15,8 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class SignInActivity extends AppCompatActivity {
 
     EditText fName, lName, email_phoneNumber, password, reenter_password;
@@ -24,6 +27,8 @@ public class SignInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signin);
+        Objects.requireNonNull(getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.light_sky_blue)));
+
         fName = findViewById(R.id.fName);
         lName = findViewById(R.id.lName);
         email_phoneNumber = findViewById(R.id.eMail_phoneNumber);

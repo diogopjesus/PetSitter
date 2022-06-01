@@ -12,19 +12,28 @@
         android:theme="@style/Theme.PetSitter">
         <activity
             android:name=".PetSittingRequest"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".PetOwner_HomePage"
+            android:label="Pet Sitting"/>
         <activity
             android:name=".PetHostingRequest"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".PetOwner_HomePage"
+            android:label="Pet Hosting"/>
         <activity
             android:name=".DogWalkingRequest"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".PetOwner_HomePage"
+            android:label="Dog Walking"/>
         <activity
             android:name=".PetOwner_HomePage"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Home"/>
         <activity
             android:name=".SignInActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".LoginActivity"
+            android:label="" />
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
