@@ -21,12 +21,13 @@
         app:layout_constraintVertical_bias="0.052" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/animalsSpinner"
         android:layout_width="330dp"
         android:layout_height="30dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/rounded_corner_text_grey"
         android:textColor="#a6a6a6"
+        android:fontFamily="@font/montserrat"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.469"
@@ -44,7 +45,7 @@
         android:textColor="#4F4F4F"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/animalsSpinner" />
 
     <TextView
         android:id="@+id/textView11"
@@ -59,32 +60,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/animalsSpinner" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/requestDate"
         android:layout_width="125dp"
         android:layout_height="30dp"
         android:background="@drawable/rounded_corner_text_grey"
-        android:ems="10"
         android:inputType="date"
         android:textColor="#a6a6a6"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editTextDate2"
+        app:layout_constraintEnd_toStartOf="@+id/requestTime"
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12"
         app:layout_constraintVertical_bias="0.018" />
 
     <EditText
-        android:id="@+id/editTextDate2"
+        android:id="@+id/requestTime"
         android:layout_width="125dp"
         android:layout_height="30dp"
         android:layout_marginEnd="88dp"
         android:background="@drawable/rounded_corner_text_grey"
         android:ems="10"
-        android:inputType="date"
+        android:inputType="time"
         android:textColor="#a6a6a6"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -105,16 +105,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+        app:layout_constraintTop_toBottomOf="@+id/requestTime" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/regularitySpinner"
         android:layout_width="330dp"
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_corner_text_grey"
         android:textColor="#a6a6a6"
         android:textSize="20sp"
+        android:fontFamily="@font/montserrat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="parent"
@@ -132,16 +133,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        app:layout_constraintTop_toBottomOf="@+id/regularitySpinner" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/requestDetails"
         android:layout_width="330dp"
         android:layout_height="150dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/rounded_corner_text_grey"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textMultiLine"
         android:textColor="#a6a6a6"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -153,14 +154,14 @@
         android:layout_width="413dp"
         android:layout_height="1dp"
         android:background="#a6a6a6"
-        app:layout_constraintBottom_toTopOf="@+id/createAccount_btn"
+        app:layout_constraintBottom_toTopOf="@+id/add_DogWalkingRequest"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4"
+        app:layout_constraintTop_toBottomOf="@+id/requestDetails"
         app:layout_constraintVertical_bias="0.756" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/createAccount_btn"
+        android:id="@+id/add_DogWalkingRequest"
         android:layout_width="330dp"
         android:layout_height="48dp"
         android:layout_marginTop="120dp"
@@ -168,10 +169,11 @@
         android:fontFamily="@font/montserrat"
         android:onClick="onClickEvent"
         android:text="Add Request"
+        android:textStyle="bold"
         android:textColor="@color/sea_green_crayola"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintTop_toBottomOf="@+id/requestDetails" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,12 +21,14 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-
-        return new RequestsFragment();
+        switch (position){
+            default:
+                return new RequestsFragment();
+        }
     }
 
     @Override
     public int getItemCount() {
-        return 1;
+        return 3;
     }
 }

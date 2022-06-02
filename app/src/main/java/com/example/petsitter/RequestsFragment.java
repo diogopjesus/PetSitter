@@ -2,6 +2,7 @@ package com.example.petsitter;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,25 +33,41 @@ public class RequestsFragment extends Fragment {
         RecyclerViewPetOwnerRequestsAdapter adapter = new RecyclerViewPetOwnerRequestsAdapter(view.getContext(), requestsPetOwnerModel);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        // Inflate the layout for this fragment
         return view;
     }
 
     public void setUpRequestsPetOwnerModels(){
-        ArrayList<JSONObject> requestsDatabase = DB.getRequests();
-        int type;
-        String serviceType,animalName, time, nOfCandidates;
-        LocalDate DateNow = LocalDate.now(), requestDate;
-        for(JSONObject request: requestsDatabase){
-            type = (Integer) request.get("type");
-            if(type == 1){ serviceType = "Pet Sitting"; }
-            else if(type == 2){ serviceType = "Pet Hosting"; }
-            else serviceType = "Dog Walking";
-            animalName = (String) request.get("name");
-            requestDate = (LocalDate) request.get("date");
-            nOfCandidates = Integer.toString(0);
-            requestsPetOwnerModel.add(new RequestsPetOwnerModel(serviceType,animalName,
-                    Integer.toString(Period.between(DateNow, requestDate).getDays()),nOfCandidates));
+        try {
+            ArrayList<JSONObject> requestsDatabase = DB.getRequests();
+            int type, animalId;
+            String serviceType, nOfCandidates, temp, animalName = "";
+            LocalDate DateNow = LocalDate.now(), requestDate;
+            ArrayList<JSONObject> animalsDatabase = DB.getAnimals();
+            assert requestsDatabase != null;
+            for (JSONObject request : requestsDatabase) {
+                type = ((Long) request.get("type")).intValue();
+                if (type == 1) {
+                    serviceType = "Pet Sitting";
+                } else if (type == 2) {
+                    serviceType = "Pet Hosting";
+                } else serviceType = "Dog Walking";
+                animalId = ((Long) request.get("pet_id")).intValue();
+                assert animalsDatabase != null;
+                for (JSONObject animalRequest : animalsDatabase) {
+                    if (animalId == ((Long) animalRequest.get("animal_id")).intValue()) {
+                        animalName = (String) animalRequest.get("name");
+                        break;
+                    }
+                }
+                temp = (String) request.get("date");
+                requestDate = LocalDate.parse(temp);
+                nOfCandidates = Integer.toString(0);
+                requestsPetOwnerModel.add(new RequestsPetOwnerModel(serviceType, animalName,
+                        Integer.toString(Period.between(DateNow, requestDate).getDays()), nOfCandidates));
+            }
+        } catch (Exception e){
+            Log.d("TAG", e.toString());
         }
+
     }
 }

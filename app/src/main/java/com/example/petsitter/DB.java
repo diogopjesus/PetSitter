@@ -130,7 +130,7 @@ public class DB implements Serializable  {
         return -1;
     }
 
-    public static int addAnimal(String type, String sex, String breed, String name, double size, String description, ArrayList<String> images) throws JSONException {
+    public static int addAnimal(String type, String sex, String breed, String name, double size, String description, ArrayList<String> images) {
         JSONObject entry = new JSONObject();
         entry.put("type", type);
         entry.put("sex", sex);

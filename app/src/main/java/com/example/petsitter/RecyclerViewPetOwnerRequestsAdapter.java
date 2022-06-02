@@ -38,8 +38,8 @@ public class RecyclerViewPetOwnerRequestsAdapter extends RecyclerView.Adapter<Re
 
         holder.serviceType.setText(serviceType);
         holder.animalName.setText(animalName);
-        holder.time.setText(time);
-        holder.numberOfCandidates.setText(nOfCandidates);
+        holder.time.setText("Time Left: " + time + " days");
+        holder.numberOfCandidates.setText("Number of Candidates: " +nOfCandidates);
     }
 
     @Override

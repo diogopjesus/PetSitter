@@ -1,6 +1,7 @@
 package com.example.petsitter;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
@@ -26,12 +27,13 @@ public class AddAnimal extends AppCompatActivity {
     RadioButton radioButton;
     Spinner spinnerAnimalType, spinnerAnimalBreed;
     String animalType, animalBreed, animalSex;
-
+    AppCompatButton button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_animal);
         Objects.requireNonNull(getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.light_sky_blue)));
+
         spinnerAnimalType = findViewById(R.id.animalType);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.animals, android.R.layout.simple_spinner_item);
@@ -85,14 +87,12 @@ public class AddAnimal extends AppCompatActivity {
             animalType = spinnerAnimalType.getSelectedItem().toString();
             animalBreed = spinnerAnimalType.getSelectedItem().toString();
             animalSex = radioButton.getText().toString();
-            try {
-                DB.addAnimal(animalType, animalSex, animalBreed, animalName.getText().toString(),
-                        Double.parseDouble(animalSize.getText().toString()), animalDescription.getText().toString(),
-                        new ArrayList<>());
-                startActivity(new Intent(v.getContext(), MyAnimals.class));
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
+
+            DB.addAnimal(animalType, animalSex, animalBreed, animalName.getText().toString(),
+                    Double.parseDouble(animalSize.getText().toString()), animalDescription.getText().toString(),
+                    new ArrayList<>());
+            startActivity(new Intent(v.getContext(), MyAnimals.class));
+
         }
     }
 }
