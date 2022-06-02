@@ -38,6 +38,7 @@ public class PetOwner_HomePage extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @SuppressLint("NonConstantResourceId")
     public void chooseRequestType(View v) {
         Intent intent;
@@ -47,7 +48,7 @@ public class PetOwner_HomePage extends AppCompatActivity {
 
                 break;
             case R.id.appCompatButton2:
-                intent = new Intent(getApplicationContext(), PetOwnerRequests.class);
+                intent = new Intent(getApplicationContext(), PetHostingRequest.class);
 
                 break;
             case R.id.appCompatButton3:

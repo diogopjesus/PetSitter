@@ -48,9 +48,14 @@ public class RequestsFragment extends Fragment {
                 type = ((Long) request.get("type")).intValue();
                 if (type == 1) {
                     serviceType = "Pet Sitting";
+                    temp = (String) request.get("from");
                 } else if (type == 2) {
                     serviceType = "Pet Hosting";
-                } else serviceType = "Dog Walking";
+                    temp = (String) request.get("from");
+                } else{
+                    serviceType = "Dog Walking";
+                    temp = (String) request.get("date");
+                }
                 animalId = ((Long) request.get("pet_id")).intValue();
                 assert animalsDatabase != null;
                 for (JSONObject animalRequest : animalsDatabase) {
@@ -59,7 +64,6 @@ public class RequestsFragment extends Fragment {
                         break;
                     }
                 }
-                temp = (String) request.get("date");
                 requestDate = LocalDate.parse(temp);
                 nOfCandidates = Integer.toString(0);
                 requestsPetOwnerModel.add(new RequestsPetOwnerModel(serviceType, animalName,

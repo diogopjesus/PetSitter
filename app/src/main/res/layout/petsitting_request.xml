@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.052" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/animalsSpinner"
         android:layout_width="330dp"
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
@@ -44,7 +44,7 @@
         android:textColor="#4F4F4F"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/animalsSpinner" />
 
     <TextView
         android:id="@+id/textView11"
@@ -59,10 +59,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.129"
         app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/animalsSpinner" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/from"
         android:layout_width="120dp"
         android:layout_height="30dp"
         android:background="@drawable/rounded_corner_text_grey"
@@ -71,14 +71,14 @@
         android:inputType="date"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editTextDate2"
+        app:layout_constraintEnd_toStartOf="@+id/until"
         app:layout_constraintHorizontal_bias="0.417"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12"
         app:layout_constraintVertical_bias="0.01" />
 
     <EditText
-        android:id="@+id/editTextDate2"
+        android:id="@+id/until"
         android:layout_width="120dp"
         android:layout_height="30dp"
         android:layout_marginEnd="80dp"
@@ -103,7 +103,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.241"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+        app:layout_constraintTop_toBottomOf="@+id/from" />
 
     <View
         android:layout_width="413dp"
@@ -112,11 +112,11 @@
         app:layout_constraintBottom_toTopOf="@+id/createAccount_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4"
+        app:layout_constraintTop_toBottomOf="@+id/details"
         app:layout_constraintVertical_bias="0.793" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/nVisitsDay"
         android:layout_width="330dp"
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
@@ -143,10 +143,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/nVisitsDay" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/location"
         android:layout_width="330dp"
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
@@ -172,10 +172,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/location" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/details"
         android:layout_width="330dp"
         android:layout_height="150dp"
         android:layout_marginTop="4dp"
@@ -202,6 +202,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintTop_toBottomOf="@+id/details" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
