@@ -5,50 +5,14 @@
 
     <application
         android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PetSitter">
-        <activity
-            android:name=".PetOwnerRequests"
-            android:exported="false" />
-        <activity
-            android:name=".AddAnimal"
-            android:exported="false"
-            android:label="Add Animal"
-            android:parentActivityName=".MyAnimals" />
-        <activity
-            android:name=".MyAnimals"
-            android:exported="false"
-            android:label="My Animals" />
-        <activity
-            android:name=".PetSittingRequest"
-            android:exported="false"
-            android:label="Pet Sitting"
-            android:parentActivityName=".PetOwner_HomePage" />
-        <activity
-            android:name=".PetHostingRequest"
-            android:exported="false"
-            android:label="Pet Hosting"
-            android:parentActivityName=".PetOwner_HomePage" />
-        <activity
-            android:name=".DogWalkingRequest"
-            android:exported="false"
-            android:label="Dog Walking"
-            android:parentActivityName=".PetOwner_HomePage" />
-        <activity
-            android:name=".PetOwner_HomePage"
-            android:exported="false"
-            android:label="Home" />
-        <activity
-            android:name=".SignInActivity"
-            android:exported="false"
-            android:label=""
-            android:parentActivityName=".LoginActivity" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
+        android:theme="@style/Theme.PetSitter"
+        tools:targetApi="31">
         <activity
             android:name=".MainActivity"
             android:exported="true">
