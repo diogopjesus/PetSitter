@@ -30,4 +30,11 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowLightStatusBar">true</item>
     </style>
+
+    <style name="roundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">75dp</item>
+        <item name="color">@color/white</item>
+
+    </style>
 </resources>
