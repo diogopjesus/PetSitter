@@ -7,4 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="dark_gray">#4F4F4F</color>
+    <color name="darker_gray">#3f3f3f</color>
+    <color name="light_gray">#f0f0f0</color>
+    <color name="error_red">#b00020</color>
+    <color name="blue_jeans_300">#60b0ff</color>
+    <color name="blue_jeans_500">#2a8efb</color>
+    <color name="blue_jeans_100">#badcff</color>
+    <color name="maximum_green_700">#679436</color>
+    <color name="maximum_green_500">#89b747</color>
+    <color name="maximum_green_900">#345f1d</color>
 </resources>
