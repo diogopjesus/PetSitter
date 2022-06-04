@@ -1,24 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="56dp"
+    android:layout_marginBottom="25dp"
     android:orientation="vertical"
     tools:context=".HomeFragment">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/view_pager"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@color/white"/>
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+    </RelativeLayout>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/add_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/blue_jeans_100"
+        android:text="Add Request"
+        app:icon="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_dog_walking_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/blue_jeans_100"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/add_fab"
+        app:layout_constraintEnd_toEndOf="@+id/add_fab"
+        app:srcCompat="@drawable/ic_dogwalking" />
+
+    <TextView
+        android:id="@+id/add_dog_walking_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Dog Walking"
+        app:layout_constraintBottom_toBottomOf="@+id/add_dog_walking_fab"
+        app:layout_constraintEnd_toStartOf="@+id/add_dog_walking_fab"
+        app:layout_constraintTop_toTopOf="@+id/add_dog_walking_fab" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_petSitting_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/blue_jeans_100"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/add_dog_walking_fab"
+        app:layout_constraintEnd_toEndOf="@+id/add_dog_walking_fab"
+        app:layout_constraintStart_toStartOf="@+id/add_dog_walking_fab"
+        app:srcCompat="@drawable/ic_petsitting_24" />
+
+    <TextView
+        android:id="@+id/add_petSitting_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Pet Sitting"
+        app:layout_constraintBottom_toBottomOf="@+id/add_petSitting_fab"
+        app:layout_constraintEnd_toStartOf="@+id/add_petSitting_fab"
+        app:layout_constraintTop_toTopOf="@+id/add_petSitting_fab" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_petHosting_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/blue_jeans_100"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/add_petSitting_fab"
+        app:layout_constraintEnd_toEndOf="@+id/add_petSitting_fab"
+        app:layout_constraintStart_toStartOf="@+id/add_petSitting_fab"
+        app:srcCompat="@drawable/ic_pethosting_24" />
+
+    <TextView
+        android:id="@+id/add_petHosting_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Pet Hosting"
+        app:layout_constraintBottom_toBottomOf="@+id/add_petHosting_fab"
+        app:layout_constraintEnd_toStartOf="@+id/add_petHosting_fab"
+        app:layout_constraintTop_toTopOf="@+id/add_petHosting_fab" />
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

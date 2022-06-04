@@ -1,9 +1,11 @@
 package com.example.petsitter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -12,6 +14,8 @@ import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.petsitter.databinding.FragmentHomeBinding;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -69,6 +73,14 @@ public class HomeFragment extends Fragment {
         }
     }
 
+    FloatingActionButton mAddPetHosting, mAddPetSitting, mAddDogWalking;
+
+    ExtendedFloatingActionButton mAddFab;
+
+    TextView mAddPetHostingText, mAddPetSittingText, mAddDogWalkingText;
+
+    // to check whether sub FABs are visible or not
+    Boolean isAllFabsVisible;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -79,6 +91,78 @@ public class HomeFragment extends Fragment {
         View v = binding.getRoot();
         init();
 
+        mAddFab = v.findViewById(R.id.add_fab);
+
+        mAddDogWalking = v.findViewById(R.id.add_dog_walking_fab);
+        mAddPetSitting = v.findViewById(R.id.add_petSitting_fab);
+        mAddPetHosting = v.findViewById(R.id.add_petHosting_fab);
+
+        mAddDogWalkingText = v.findViewById(R.id.add_dog_walking_text);
+        mAddPetSittingText = v.findViewById(R.id.add_petSitting_text);
+        mAddPetHostingText = v.findViewById(R.id.add_petHosting_text);
+
+        mAddDogWalking.setVisibility(View.GONE);
+        mAddPetSitting.setVisibility(View.GONE);
+        mAddPetHosting.setVisibility(View.GONE);
+        mAddDogWalkingText.setVisibility(View.GONE);
+        mAddPetSittingText.setVisibility(View.GONE);
+        mAddPetHostingText.setVisibility(View.GONE);
+
+        isAllFabsVisible = false;
+
+        mAddFab.shrink();
+
+        mAddFab.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if (!isAllFabsVisible) {
+
+                            mAddDogWalking.show();
+                            mAddPetSitting.show();
+                            mAddPetHosting.show();
+                            mAddDogWalkingText.setVisibility(View.VISIBLE);
+                            mAddPetSittingText.setVisibility(View.VISIBLE);
+                            mAddPetHostingText.setVisibility(View.VISIBLE);
+
+                            mAddFab.extend();
+
+                            isAllFabsVisible = true;
+                        } else {
+
+                            mAddDogWalking.hide();
+                            mAddPetSitting.hide();
+                            mAddPetHosting.hide();
+                            mAddDogWalkingText.setVisibility(View.GONE);
+                            mAddPetSittingText.setVisibility(View.GONE);
+                            mAddPetHostingText.setVisibility(View.GONE);
+
+                            mAddFab.shrink();
+
+                            isAllFabsVisible = false;
+                        }
+                    }
+                });
+
+        mAddDogWalking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(view.getContext(),DogWalkingRequest.class));
+            }
+        });
+
+        mAddPetSitting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(view.getContext(),PetSittingRequest.class));
+            }
+        });
+
+        mAddPetHosting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(view.getContext(),PetHostingRequest.class));
+            }
+        });
         return v;
     }
 

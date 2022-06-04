@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select animal(s)"
+        android:textColor="#4F4F4F"
+        android:fontFamily="@font/montserrat"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052" />
+
+    <Spinner
+        android:id="@+id/animalsSpinner"
+        android:layout_width="330dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corner"
+        android:textColor="#4F4F4F"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:text="From"
+        android:fontFamily="@font/montserrat"
+        android:textColor="#4F4F4F"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/animalsSpinner" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="24dp"
+        android:text="Until"
+        android:fontFamily="@font/montserrat"
+        android:textColor="#4F4F4F"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/animalsSpinner" />
+
+    <EditText
+        android:id="@+id/from"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:inputType="date"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/until"
+        app:layout_constraintHorizontal_bias="0.417"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.01" />
+
+    <EditText
+        android:id="@+id/until"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="80dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:inputType="date"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintVertical_bias="0.01" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Number of visits per day"
+        android:textColor="#4F4F4F"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.241"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/from" />
+
+    <EditText
+        android:id="@+id/nVisitsDay"
+        android:layout_width="330dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#4F4F4F"
+        android:textSize="20dp"
+        android:fontFamily="@font/montserrat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Location"
+        android:fontFamily="@font/montserrat"
+        android:textColor="#4F4F4F"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nVisitsDay" />
+
+    <EditText
+        android:id="@+id/location"
+        android:layout_width="330dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#4F4F4F"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Details"
+        android:fontFamily="@font/montserrat"
+        android:textColor="#4F4F4F"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location" />
+
+    <EditText
+        android:id="@+id/details"
+        android:layout_width="330dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#4F4F4F"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#a6a6a6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addPetSittingRequest"
+        android:layout_width="330dp"
+        android:layout_height="48dp"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="@font/montserrat"
+        android:text="Add Request"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
