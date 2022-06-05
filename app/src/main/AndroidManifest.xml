@@ -14,13 +14,13 @@
         android:theme="@style/Theme.ActivityMain"
         tools:targetApi="31">
         <activity
-            android:name=".PetHostingRequest"
+            android:name=".PetHostingRequestActivity"
             android:exported="false" />
         <activity
-            android:name=".PetSittingRequest"
+            android:name=".PetSittingRequestActivity"
             android:exported="false" />
         <activity
-            android:name=".DogWalkingRequest"
+            android:name=".DogWalkingRequestActivity"
             android:exported="false" />
         <activity
             android:name=".AddAnimal"

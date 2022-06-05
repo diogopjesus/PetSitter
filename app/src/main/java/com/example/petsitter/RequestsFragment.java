@@ -13,7 +13,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.petsitter.databinding.FragmentHomeBinding;
+import com.example.petsitter.databinding.FragmentRequestsBinding;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
@@ -24,7 +24,7 @@ import com.google.android.material.tabs.TabLayoutMediator;
  * Use the {@link MenuFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
+public class RequestsFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,7 +35,7 @@ public class HomeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public HomeFragment() {
+    public RequestsFragment() {
         // Required empty public constructor
     }
 
@@ -44,7 +44,7 @@ public class HomeFragment extends Fragment {
 
     // tab titles
     private String[] titles = new String[]{"Ongoing", "Upcoming", "Past"};
-    FragmentHomeBinding binding;
+    FragmentRequestsBinding binding;
 
     /**
      * Use this factory method to create a new instance of
@@ -85,9 +85,9 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        inflater.inflate(R.layout.fragment_home, container, false);
+        View root = inflater.inflate(R.layout.fragment_requests, container, false);
 
-        binding = FragmentHomeBinding.inflate(getLayoutInflater());
+        binding = FragmentRequestsBinding.inflate(getLayoutInflater());
         View v = binding.getRoot();
         init();
 
@@ -146,21 +146,21 @@ public class HomeFragment extends Fragment {
         mAddDogWalking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(view.getContext(),DogWalkingRequest.class));
+                startActivity(new Intent(view.getContext(), DogWalkingRequestActivity.class));
             }
         });
 
         mAddPetSitting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(view.getContext(),PetSittingRequest.class));
+                startActivity(new Intent(view.getContext(), PetSittingRequestActivity.class));
             }
         });
 
         mAddPetHosting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(view.getContext(),PetHostingRequest.class));
+                startActivity(new Intent(view.getContext(), PetHostingRequestActivity.class));
             }
         });
         return v;

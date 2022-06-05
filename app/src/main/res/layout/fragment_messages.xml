@@ -3,13 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".MessagesFragment">
+    tools:context=".MessagesFragment"
+    android:background="@color/light_gray">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_background_small">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Messages"
+            android:gravity="center|left"
+            android:textColor="@color/blue_jeans_300"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+    </Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatlistrecycle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="messages" />
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/card_message" />
 
 </LinearLayout>

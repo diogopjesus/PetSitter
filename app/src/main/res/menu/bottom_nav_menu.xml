@@ -2,19 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/homeFragment"
-        android:icon="@drawable/ic_baseline_home_24"
-        android:title="Home" />
+        android:icon="@drawable/ic_baseline_list_alt_24"
+        android:title="Requests" />
 
     <item
         android:id="@+id/messagesFragment"
         android:icon="@drawable/ic_baseline_message_24"
         android:enabled="true"
         android:title="Messages" />
-
-    <item
-        android:id="@+id/placeholder"
-        android:title=""
-        android:enabled="false"/>
 
     <item
         android:id="@+id/animalsFragment"

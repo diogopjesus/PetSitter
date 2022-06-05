@@ -18,13 +18,13 @@
             android:id="@+id/animalImage"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
             android:layout_gravity="top|center"
             android:layout_margin="10dp"
-            app:shapeAppearanceOverlay="@style/roundedImageView"
+            android:adjustViewBounds="true"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/cao" />
+            android:scaleType="fitCenter"
+            android:src="@drawable/cao"
+            app:shapeAppearanceOverlay="@style/roundedImageView" />
 
         <TextView
             android:id="@+id/animalName"

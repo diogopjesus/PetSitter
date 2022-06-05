@@ -25,7 +25,7 @@ public class AnimalsRecyclerViewAdapter extends RecyclerView.Adapter<AnimalsRecy
     @Override
     public AnimalsRecyclerViewAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.fragment_animals_recyclerview,parent,false);
+        View view = inflater.inflate(R.layout.card_animal,parent,false);
         return new AnimalsRecyclerViewAdapter.MyViewHolder(view);
     }
 
