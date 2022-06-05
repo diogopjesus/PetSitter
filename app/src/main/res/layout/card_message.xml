@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    app:cardPreventCornerOverlap="true"
     app:cardUseCompatPadding="true"
-    app:cardPreventCornerOverlap="false"
-    app:cardCornerRadius="10dp"
-    android:outlineSpotShadowColor="@color/white">
+    android:outlineSpotShadowColor="@color/light_gray">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/profileimage"
@@ -25,6 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
             android:layout_toEndOf="@id/profileimage"
             android:layout_toRightOf="@id/profileimage"
             android:text="His Name"
@@ -32,17 +32,30 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/lastMessge"
+            android:id="@+id/lastMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="38dp"
             android:layout_toEndOf="@id/profileimage"
             android:layout_toRightOf="@id/profileimage"
             android:maxLines="2"
             android:text="Last Message"
-            android:textSize="12sp"
-            android:textColor="@color/medium_gray" />
+            android:textColor="@color/medium_gray"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/lastMessageDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/profileimage"
+            android:layout_toRightOf="@id/profileimage"
+            android:text="88/88/8888"
+            android:maxLines="1"
+            android:textColor="@color/medium_gray"
+            android:textSize="11sp" />
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

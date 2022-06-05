@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -27,7 +27,7 @@ public class AnimalsFragment extends Fragment {
         setUpAnimalsModel();
         AnimalsRecyclerViewAdapter adapter = new AnimalsRecyclerViewAdapter(view.getContext(), animalsModel);
         recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
+        recyclerView.setLayoutManager(new GridLayoutManager(view.getContext(), 2));
 
         FloatingActionButton fab = view.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -41,7 +41,7 @@ public class AnimalsFragment extends Fragment {
     }
 
     public void setUpAnimalsModel(){
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 5; i++) {
             animalsModel.add(new AnimalsModel("Tobi"));
         }
     }

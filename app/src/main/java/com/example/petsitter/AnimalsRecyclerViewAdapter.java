@@ -1,12 +1,14 @@
 package com.example.petsitter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -35,6 +37,12 @@ public class AnimalsRecyclerViewAdapter extends RecyclerView.Adapter<AnimalsRecy
         String animalName = animalsModel.get(position).getAnimalName();
 
         holder.animalName.setText(animalName);
+        holder.animalCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.getContext().startActivity(new Intent(v.getContext(), AnimalPageActivity.class));
+            }
+        });
     }
 
     @Override
@@ -45,9 +53,11 @@ public class AnimalsRecyclerViewAdapter extends RecyclerView.Adapter<AnimalsRecy
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
         TextView animalName;
+        CardView animalCard;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             animalName = itemView.findViewById(R.id.animalName);
+            animalCard = itemView.findViewById(R.id.animalCard);
         }
     }
 }

@@ -51,7 +51,7 @@ public class MessagesRecyclerViewAdapter extends RecyclerView.Adapter<MessagesRe
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             userName = itemView.findViewById(R.id.userName);
-            lastMessage = itemView.findViewById(R.id.lastMessge);
+            lastMessage = itemView.findViewById(R.id.lastMessage);
         }
     }
 }

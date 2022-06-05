@@ -23,6 +23,11 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
     </style>
 
+    <style name="Theme.ActivitySecondary" parent="Theme.PetSitter">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+    </style>
+
     <style name="Theme.ActivityMain" parent="Theme.PetSitter">
         <item name="android:colorBackground">@color/light_gray</item>
         <item name="android:statusBarColor">@color/white</item>
@@ -33,7 +38,7 @@
 
     <style name="roundedImageView">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">75dp</item>
+        <item name="cornerSize">50dp</item>
         <item name="color">@color/white</item>
     </style>
 

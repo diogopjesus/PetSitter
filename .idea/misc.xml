@@ -15,8 +15,9 @@
         <entry key="app/src/main/res/drawable/ic_pethosting_24.xml" value="0.249" />
         <entry key="app/src/main/res/drawable/ic_petsitting_24.xml" value="0.249" />
         <entry key="app/src/main/res/drawable/ic_transparent_background.xml" value="0.249" />
+        <entry key="app/src/main/res/layout/activity_animal_page.xml" value="0.28559213339033773" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/card_animal.xml" value="0.28559213339033773" />
+        <entry key="app/src/main/res/layout/card_animal.xml" value="0.5" />
         <entry key="app/src/main/res/layout/card_message.xml" value="0.49008498583569404" />
         <entry key="app/src/main/res/layout/card_request.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_animals.xml" value="0.25" />
