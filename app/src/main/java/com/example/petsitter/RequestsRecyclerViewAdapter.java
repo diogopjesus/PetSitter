@@ -1,6 +1,7 @@
 package com.example.petsitter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,20 @@ public class RequestsRecyclerViewAdapter extends RecyclerView.Adapter<RequestsRe
         holder.requestType.setText(requestType);
         holder.requestStartDate.setText(requestStartDate);
         holder.requestTime.setText(requestTime);
+
+        holder.requestCandidatesAvailable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.getContext().startActivity(new Intent(v.getContext(), AnimalPageActivity.class));
+            }
+        });
+
+        holder.moreInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.getContext().startActivity(new Intent(v.getContext(), RequestPageActivity.class));
+            }
+        });
     }
 
     @Override
@@ -47,13 +62,15 @@ public class RequestsRecyclerViewAdapter extends RecyclerView.Adapter<RequestsRe
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView requestStartDate, requestTime, requestType;
+        TextView requestStartDate, requestTime, requestType, requestCandidatesAvailable, moreInfo;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             requestStartDate = itemView.findViewById(R.id.requestStartDate);
             requestTime = itemView.findViewById(R.id.requestTime);
             requestType = itemView.findViewById(R.id.requestType);
+            requestCandidatesAvailable = itemView.findViewById(R.id.requestCandidatesAvailable);
+            moreInfo = itemView.findViewById(R.id.moreInfo);
         }
     }
 }

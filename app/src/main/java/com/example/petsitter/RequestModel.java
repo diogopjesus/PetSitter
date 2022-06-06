@@ -4,6 +4,8 @@ public class RequestModel {
     String requestType;
     String requestStartDate;
     String requestTime;
+    String requestCandidatesAvailable;
+    String moreInfo;
 
 
     public RequestModel(String requestType, String requestStartDate, String requestTime) {
@@ -23,4 +25,8 @@ public class RequestModel {
     public String getRequestTime() {
         return requestTime;
     }
+
+    public String getRequestCandidatesAvailable() { return requestCandidatesAvailable; }
+
+    public String getMoreInfo() { return moreInfo; }
 }

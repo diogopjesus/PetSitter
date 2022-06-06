@@ -1,7 +1,7 @@
 package com.example.petsitter;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,12 +15,13 @@ public class AnimalPageActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed()
-    {
-        Intent intent = new Intent(this,MainActivity.class);
-        intent.putExtra("Check",1);
-        startActivity(intent);
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
-
-
 }

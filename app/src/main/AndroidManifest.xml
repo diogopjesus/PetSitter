@@ -14,25 +14,40 @@
         android:theme="@style/Theme.ActivityMain"
         tools:targetApi="31">
         <activity
-            android:name=".RequestPageActivity"
+            android:name=".CandidateProfileActivity"
             android:exported="false" />
+        <activity
+            android:name=".UserProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ActivitySecondary" />
+        <activity
+            android:name=".CandidatesActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ActivitySecondary" />
+        <activity
+            android:name=".RequestPageActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ActivitySecondary" />
         <activity
             android:name=".AnimalPageActivity"
             android:exported="false"
-            android:theme="@style/Theme.ActivitySecondary">
-        </activity>
+            android:theme="@style/Theme.ActivitySecondary" />
         <activity
             android:name=".PetHostingRequestActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.ActivitySecondary" />
         <activity
             android:name=".PetSittingRequestActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.ActivitySecondary" />
         <activity
             android:name=".DogWalkingRequestActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.ActivitySecondary" />
         <activity
             android:name=".AddAnimal"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.ActivitySecondary" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
