@@ -48,6 +48,12 @@
             android:name=".AddAnimal"
             android:exported="false"
             android:theme="@style/Theme.ActivitySecondary" />
+
+        <activity
+            android:name=".PetSitterMainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.ActivityMain" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

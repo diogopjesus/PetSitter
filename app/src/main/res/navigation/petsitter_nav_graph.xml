@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/petSitterOffersFragment">
+    <fragment
+        android:id="@+id/petSitterOffersFragment"
+        android:name="com.example.petsitter.PetSitterOffersFragment"
+        android:label="fragment_pet_sitter_offers"
+        tools:layout="@layout/fragment_pet_sitter_offers" />
+    <fragment
+        android:id="@+id/petSitterRequestsFragment"
+        android:name="com.example.petsitter.PetSitterRequestsFragment"
+        android:label="fragment_pet_sitter_requests"
+        tools:layout="@layout/fragment_pet_sitter_requests" />
+    <fragment
+        android:id="@+id/petSitterMessagesFragment"
+        android:name="com.example.petsitter.PetSitterMessagesFragment"
+        android:label="fragment_pet_sitter_messages"
+        tools:layout="@layout/fragment_pet_sitter_messages" />
+    <fragment
+        android:id="@+id/petSitterMenuFragment"
+        android:name="com.example.petsitter.PetSitterMenuFragment"
+        android:label="fragment_pet_sitter_menu"
+        tools:layout="@layout/fragment_pet_sitter_menu" />
+</navigation>

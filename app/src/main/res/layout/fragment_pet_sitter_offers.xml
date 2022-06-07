@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Messages"
+            android:text="Offers"
             android:gravity="center|start"
             android:textColor="@color/blue_jeans_300"
             android:textSize="25sp"
@@ -25,10 +25,10 @@
     </Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/chatlistrecycle"
+        android:id="@+id/offersRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/card_message" />
+        tools:listitem="@layout/petsitter_card_request" />
 
 </LinearLayout>

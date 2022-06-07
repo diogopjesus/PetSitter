@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:id="@+id/mainActivityChangeFragment">
+    tools:context=".PetSitterMainActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_fragment"
@@ -14,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/petowner_nav_graph"
+        app:navGraph="@navigation/petsitter_nav_graph"
         android:layout_marginBottom="56dp"/>
 
     <com.google.android.material.bottomappbar.BottomAppBar
@@ -29,7 +28,7 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:layout_marginEnd="16dp"
-            app:menu="@menu/bottom_nav_menu" />
+            app:menu="@menu/petsitter_bottom_nav_menu" />
     </com.google.android.material.bottomappbar.BottomAppBar>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
