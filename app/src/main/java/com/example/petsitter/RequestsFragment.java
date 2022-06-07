@@ -2,7 +2,6 @@ package com.example.petsitter;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,7 +41,7 @@ public class RequestsFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_requests, container, false);
         TabLayout tabLayout = root.findViewById(R.id.tab_layout);
         ViewPager2 viewPager2 = root.findViewById(R.id.view_pager);
-        ViewPagerFragmentAdapter adapter= new ViewPagerFragmentAdapter((MainActivity) getActivity());
+        ViewPagerFragmentAdapter adapter= new ViewPagerFragmentAdapter((PetOwnerMainActivity) getActivity());
         viewPager2.setAdapter(adapter);
 
         new TabLayoutMediator(tabLayout,viewPager2, (tab, position) ->

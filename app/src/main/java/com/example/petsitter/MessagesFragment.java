@@ -32,7 +32,7 @@ public class MessagesFragment extends Fragment {
 
     public void setUpMessagesModel(){
         for (int i = 0; i < 15; i++) {
-            messagesModel.add(new MessageModel("Carlos Cardoso", "Thank you!"));
+            messagesModel.add(new MessageModel("Carlos", "Thank you!"));
         }
     }
 }
