@@ -6,40 +6,33 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.ViewPager2;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.petsitter.databinding.FragmentRequestsBinding;
+import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 public class PetSitterRequestsFragment extends Fragment {
 
     private String[] titles = new String[]{"Applied", "Upcoming", "Past"};
-    FragmentRequestsBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_pet_sitter_requests, container, false);
-        binding = FragmentRequestsBinding.inflate(getLayoutInflater());
-        View v = binding.getRoot();
+        TabLayout tabLayout = root.findViewById(R.id.tab_layout);
+        ViewPager2 viewPager2 = root.findViewById(R.id.view_pager);
+        ViewPagerFragmentAdapter adapter= new ViewPagerFragmentAdapter((PetSitterMainActivity) getActivity());
+        viewPager2.setAdapter(adapter);
 
-        init();
-        return v;
-    }
+        new TabLayoutMediator(tabLayout,viewPager2, (tab, position) ->
+                tab.setText(titles[position])).attach();
 
-    private void init() {
-        // removing toolbar elevation
-        PetSitterMainActivity activity = (PetSitterMainActivity) getActivity();
-        binding.viewPager.setAdapter(new PetSitterRequestsFragment.ViewPagerFragmentAdapter(activity));
-
-        // attaching tab mediator
-        new TabLayoutMediator(binding.tabLayout, binding.viewPager,
-                (tab, position) -> tab.setText(titles[position])).attach();
+        return root;
     }
 
     private class ViewPagerFragmentAdapter extends FragmentStateAdapter {

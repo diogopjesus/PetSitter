@@ -11,8 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
-import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.petsitter.databinding.FragmentRequestsBinding;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
@@ -40,19 +40,23 @@ public class RequestsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_requests, container, false);
+        TabLayout tabLayout = root.findViewById(R.id.tab_layout);
+        ViewPager2 viewPager2 = root.findViewById(R.id.view_pager);
+        ViewPagerFragmentAdapter adapter= new ViewPagerFragmentAdapter((MainActivity) getActivity());
+        viewPager2.setAdapter(adapter);
 
-        binding = FragmentRequestsBinding.inflate(getLayoutInflater());
-        View v = binding.getRoot();
-        init();
-        mAddFab = v.findViewById(R.id.add_fab);
+        new TabLayoutMediator(tabLayout,viewPager2, (tab, position) ->
+                tab.setText(titles[position])).attach();
 
-        mAddDogWalking = v.findViewById(R.id.add_dog_walking_fab);
-        mAddPetSitting = v.findViewById(R.id.add_petSitting_fab);
-        mAddPetHosting = v.findViewById(R.id.add_petHosting_fab);
+        mAddFab = root.findViewById(R.id.add_fab);
 
-        mAddDogWalkingText = v.findViewById(R.id.add_dog_walking_text);
-        mAddPetSittingText = v.findViewById(R.id.add_petSitting_text);
-        mAddPetHostingText = v.findViewById(R.id.add_petHosting_text);
+        mAddDogWalking = root.findViewById(R.id.add_dog_walking_fab);
+        mAddPetSitting = root.findViewById(R.id.add_petSitting_fab);
+        mAddPetHosting = root.findViewById(R.id.add_petHosting_fab);
+
+        mAddDogWalkingText = root.findViewById(R.id.add_dog_walking_text);
+        mAddPetSittingText = root.findViewById(R.id.add_petSitting_text);
+        mAddPetHostingText = root.findViewById(R.id.add_petHosting_text);
 
         mAddDogWalking.setVisibility(View.GONE);
         mAddPetSitting.setVisibility(View.GONE);
@@ -116,18 +120,7 @@ public class RequestsFragment extends Fragment {
                 startActivity(new Intent(view.getContext(), PetHostingRequestActivity.class));
             }
         });
-        return v;
-    }
-
-    private void init() {
-        // removing toolbar elevation
-        MainActivity activity = (MainActivity)getActivity();
-
-        binding.viewPager.setAdapter(new ViewPagerFragmentAdapter(activity));
-
-        // attaching tab mediator
-        new TabLayoutMediator(binding.tabLayout, binding.viewPager,
-                (tab, position) -> tab.setText(titles[position])).attach();
+        return root;
     }
 
     private class ViewPagerFragmentAdapter extends FragmentStateAdapter {
