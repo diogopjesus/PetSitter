@@ -7,137 +7,148 @@
     android:background="@color/white"
     android:backgroundTint="@color/white">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/animalsButtonLayout"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="Animal(s)"
-        app:hintTextAppearance="@style/TextLabel"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <AutoCompleteTextView
-            android:id="@+id/animalListTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableRight="@android:drawable/arrow_down_float"
-            android:inputType="none"
-            android:padding="16dp"
-            android:textColor="@color/dark_gray"
-            android:textSize="16sp" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/dateButtonLayout"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="Date"
-        app:hintTextAppearance="@style/TextLabel"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/animalsButtonLayout">
-
-    <AutoCompleteTextView
-        android:id="@+id/datePickerButton"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableRight="@android:drawable/arrow_down_float"
-        android:inputType="none"
-        android:padding="16dp"
-        android:textColor="@color/dark_gray"
-        android:textSize="16sp" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/timeButtonLayout"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="Time"
-        app:hintTextAppearance="@style/TextLabel"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dateButtonLayout" >
-
-        <AutoCompleteTextView
-            android:id="@+id/timeButton"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableRight="@android:drawable/arrow_down_float"
-            android:inputType="none"
-            android:padding="16dp"
-            android:textColor="@color/dark_gray"
-            android:textSize="16sp" />
+            android:layout_height="match_parent">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/animalsButtonLayout"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Animal(s)"
+                app:hintTextAppearance="@style/TextLabel"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-    </com.google.android.material.textfield.TextInputLayout>
+                <AutoCompleteTextView
+                    android:id="@+id/animalListTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@android:drawable/arrow_down_float"
+                    android:inputType="none"
+                    android:padding="16dp"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dateButtonLayout"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Date"
+                app:hintTextAppearance="@style/TextLabel"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/animalsButtonLayout">
+
+                <AutoCompleteTextView
+                    android:id="@+id/datePickerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@android:drawable/arrow_down_float"
+                    android:inputType="none"
+                    android:padding="16dp"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/timeButtonLayout"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Time"
+                app:hintTextAppearance="@style/TextLabel"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dateButtonLayout" >
+
+                <AutoCompleteTextView
+                    android:id="@+id/timeButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@android:drawable/arrow_down_float"
+                    android:inputType="none"
+                    android:padding="16dp"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/regularityListLayout"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="Regularity"
-        app:hintTextAppearance="@style/TextLabel"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timeButtonLayout">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regularityListLayout"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Regularity"
+                app:hintTextAppearance="@style/TextLabel"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/timeButtonLayout">
 
-        <AutoCompleteTextView
-            android:id="@+id/regularityListTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableRight="@android:drawable/arrow_down_float"
-            android:inputType="none"
-            android:padding="16dp"
-            android:textColor="@color/dark_gray"
-            android:textSize="16sp"/>
+                <AutoCompleteTextView
+                    android:id="@+id/regularityListTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@android:drawable/arrow_down_float"
+                    android:inputType="none"
+                    android:padding="16dp"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp"/>
 
-    </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/filledTextField"
-        android:layout_width="380dp"
-        android:layout_height="330dp"
-        android:layout_marginTop="16dp"
-        android:hint="Description"
-        app:expandedHintEnabled="false"
-        app:hintTextAppearance="@style/TextLabel"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regularityListLayout">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/filledTextField"
+                android:layout_width="380dp"
+                android:layout_height="330dp"
+                android:layout_marginTop="16dp"
+                android:hint="Description"
+                app:expandedHintEnabled="false"
+                app:hintTextAppearance="@style/TextLabel"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/regularityListLayout">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/requestDetails"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="top|left"
-            android:inputType="textMultiLine"
-            android:textColor="@color/dark_gray" />
-    </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/requestDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="top|left"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/dark_gray" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/add_DogWalkingRequest"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/rounded_corner_button"
-        android:backgroundTint="@color/blue_jeans_300"
-        android:fontFamily="@font/montserrat"
-        android:text="Add Request"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/filledTextField" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_DogWalkingRequest"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rounded_corner_button"
+                android:backgroundTint="@color/blue_jeans_300"
+                android:fontFamily="@font/montserrat"
+                android:text="Add Request"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/filledTextField" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

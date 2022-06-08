@@ -116,7 +116,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="Sterilized? Yes"
+        android:text="Sterilized?: Yes"
         android:layout_marginTop="20dp"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -128,13 +128,14 @@
         android:id="@+id/animalDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="Details: Very friendly dog, loves to run in the parks and mess with all people and has all vaccinations up to date"
         android:layout_marginTop="20dp"
+        android:text="Details: Very friendly dog, loves to run in the parks and mess with all people and has all vaccinations up to date"
         android:textSize="22sp"
+        android:paddingStart="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/animalCondition"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
 

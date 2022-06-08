@@ -16,182 +16,211 @@
                 android:id="@+id/button8"
                 android:layout_width="179dp"
                 android:layout_height="127dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/rounded_corner"
                 android:fontFamily="@font/montserrat"
-                android:text="Add Animal Photo"
+                android:text="Select Image"
                 android:textColor="#4F4F4F"
                 android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/animalTypeSpinner"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner"
+                android:hint="Animal Type"
+                android:textColor="@color/dark_gray"
+                app:hintTextAppearance="@style/TextLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button8"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"  />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/animalBreedSpinner"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner"
+                android:hint="Animal Breed"
+                android:textColor="@color/dark_gray"
+                app:hintTextAppearance="@style/TextLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/animalTypeSpinner"
+                android:layout_marginTop="16dp"
+                android:padding="16dp"  />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/filledTextField"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Sex"
+                android:layout_marginTop="16dp"
+                app:hintTextAppearance="@style/TextLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/animalBreedSpinner">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView24">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Male"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="20sp"
+                        android:layout_marginEnd="40dp"/>
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Female"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="20sp" />
+
+                </RadioGroup>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/animalNameTextField"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Name"
+                app:hintTextAppearance="@style/TextLabel"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/filledTextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/sizeNameTextField"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Weight"
+                app:hintTextAppearance="@style/TextLabel"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/animalNameTextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="16sp"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/castrationTextField"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Castration"
+                android:layout_marginTop="16dp"
+                app:hintTextAppearance="@style/TextLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sizeNameTextField">
+
+                <RadioGroup
+                    android:id="@+id/castrationRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView24">
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Sterilized"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="20sp"
+                        android:layout_marginEnd="40dp"/>
+
+                    <androidx.appcompat.widget.AppCompatRadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Fertile"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="20sp" />
+
+                </RadioGroup>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/descriptionTextField"
+                android:layout_width="380dp"
+                android:layout_height="330dp"
+                android:layout_marginTop="16dp"
+                android:hint="Description"
+                app:expandedHintEnabled="false"
+                app:hintTextAppearance="@style/TextLabel"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/castrationTextField">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/requestDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="top|left"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/dark_gray" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_DogWalkingRequest"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rounded_corner_button"
+                android:backgroundTint="@color/blue_jeans_300"
+                android:fontFamily="@font/montserrat"
+                android:text="Add Request"
+                android:textColor="@color/white"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.059" />
+                app:layout_constraintTop_toBottomOf="@+id/descriptionTextField" />
 
-            <TextView
-                android:id="@+id/textView24"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/montserrat"
-                android:textColor="#4F4F4F"
-                android:text="Sex"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.089"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button8" />
-
-            <RadioGroup
-                android:id="@+id/radioGroup"
-                android:layout_width="310dp"
-                android:layout_height="48dp"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.553"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView24">
-
-                <RadioButton
-                    android:layout_width="150dp"
-                    android:layout_height="48dp"
-                    android:text="Male"
-                    android:fontFamily="@font/montserrat"
-                    android:textColor="#4F4F4F"
-                    android:textSize="20sp" />
-
-                <RadioButton
-                    android:layout_width="150dp"
-                    android:layout_height="48dp"
-                    android:layout_marginLeft="10dp"
-                    android:text="Female"
-                    android:fontFamily="@font/montserrat"
-                    android:textColor="#4F4F4F"
-                    android:textSize="20sp" />
-
-            </RadioGroup>
-
-
-            <TextView
-                android:id="@+id/textView25"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/montserrat"
-                android:text="Animal Type"
-                android:textColor="#4F4F4F"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.118"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
-
-            <Spinner
-                android:id="@+id/animalType"
-                android:layout_width="330dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="4dp"
-                android:background="@drawable/rounded_corner"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.419"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView25" />
-
-            <EditText
-                android:id="@+id/animalName"
-                android:layout_width="330dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="20dp"
-                android:hint="Animal Name"
-                android:paddingLeft="10dp"
-                android:fontFamily="@font/montserrat"
-                android:textColor="#4F4F4F"
-                android:textColorHint="#4f4f4f"
-                android:background="@drawable/rounded_corner"
-                android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.419"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/animalType" />
-
-
-            <EditText
-                android:id="@+id/animalSize"
-                android:layout_width="330dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/rounded_corner"
-                android:hint="Animal Size"
-                android:paddingLeft="10dp"
-                android:fontFamily="@font/montserrat"
-                android:textColor="#4F4F4F"
-                android:textColorHint="#4f4f4f"
-                android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.419"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/animalName" />
-
-            <TextView
-                android:id="@+id/textView29"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Animal Breed"
-                android:fontFamily="@font/montserrat"
-                android:textColor="#4F4F4F"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.127"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/animalSize" />
-
-            <Spinner
-                android:id="@+id/animalBreed"
-                android:layout_width="330dp"
-                android:layout_height="24dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/rounded_corner"
-                android:textColor="#a6a6a6"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.419"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView29" />
-
-            <EditText
-
-                android:id="@+id/animalDescription"
-                android:layout_width="330dp"
-                android:layout_height="100dp"
-                android:layout_marginTop="20dp"
-                android:hint="Animal Description"
-                android:gravity="start"
-                android:padding="10dp"
-                android:minLines="1"
-                android:maxLines="5"
-                android:fontFamily="@font/montserrat"
-                android:textColor="#4F4F4F"
-                android:textColorHint="#4F4F4F"
-                android:inputType="textMultiLine"
-                android:background="@drawable/rounded_corner"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.419"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/animalBreed" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/addAnimal_btn"
-                android:layout_width="330dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="56dp"
-                android:background="@drawable/rounded_corner"
-                android:fontFamily="@font/montserrat"
-                android:text="Add Animal"
-                android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/animalDescription" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
