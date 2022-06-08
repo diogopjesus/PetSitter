@@ -36,6 +36,14 @@
         <item name="android:windowLightStatusBar">true</item>
     </style>
 
+    <style name="Theme.ActivityStart" parent="Theme.PetSitter">
+        <item name="android:colorBackground">@color/blue_jeans_300</item>
+        <item name="android:statusBarColor">@color/blue_jeans_300</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
     <style name="roundedImageView">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50dp</item>

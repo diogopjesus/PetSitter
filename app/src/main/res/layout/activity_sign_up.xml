@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".SignUpActivity"
-    android:background="@color/blue_jeans_100">
+    android:background="@color/blue_jeans_300">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -67,7 +67,7 @@
                 android:layout_width="311dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_text"
                 android:padding="10dp"
                 android:hint="First Name"
                 android:fontFamily="@font/montserrat"
@@ -82,7 +82,7 @@
                 android:layout_width="311dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_text"
                 android:padding="10dp"
                 android:hint="Last Name"
                 android:fontFamily="@font/montserrat"
@@ -97,7 +97,7 @@
                 android:layout_width="311dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_text"
                 android:padding="10dp"
                 android:hint="Email/Mobile Number"
                 android:fontFamily="@font/montserrat"
@@ -112,7 +112,7 @@
                 android:layout_width="311dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_text"
                 android:padding="10dp"
                 android:hint="Password"
                 android:fontFamily="@font/montserrat"
@@ -128,7 +128,7 @@
                 android:layout_width="311dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/rounded_corner"
+                android:background="@drawable/rounded_corner_text"
                 android:padding="10dp"
                 android:hint="Re-enter Password"
                 android:fontFamily="@font/montserrat"
@@ -165,7 +165,7 @@
                 <RadioButton
                     android:layout_width="150dp"
                     android:layout_height="48dp"
-                    android:background="@drawable/rounded_corner"
+                    android:background="@drawable/rounded_corner_text"
                     android:text="PetSitter"
                     android:fontFamily="@font/montserrat"
                     android:textColor="@color/white"
@@ -175,12 +175,13 @@
                     android:layout_width="150dp"
                     android:layout_height="48dp"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/rounded_corner"
+                    android:background="@drawable/rounded_corner_text"
                     android:text="PetOwner"
                     android:fontFamily="@font/montserrat"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
             </RadioGroup>
+
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/createAccount_btn"
                 android:layout_width="311dp"
@@ -188,11 +189,11 @@
                 android:layout_marginTop="30dp"
                 android:text="Create account"
                 android:fontFamily="@font/montserrat"
-                android:background="@drawable/rounded_corner"
-                android:textColor="@color/black"
+                android:background="@drawable/rounded_corner_button"
+                android:textColor="@color/blue_jeans_300"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioGroup"/>
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -214,7 +215,7 @@
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="@color/blue_jeans_300"
                 android:fontFamily="@font/montserrat"
                 android:text="Sign In"
                 android:textColor="@color/white"
