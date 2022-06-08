@@ -39,7 +39,7 @@
             android:layout_toEndOf="@id/profileimage"
             android:layout_toRightOf="@id/profileimage"
             android:background="@drawable/ic_baseline_how_to_reg_24"
-            android:backgroundTint="@color/maximum_green_500"/>
+            android:backgroundTint="@color/maximum_green_500" />
 
         <TextView
             android:id="@+id/sendMessageCandidate"
@@ -61,7 +61,7 @@
             android:layout_toEndOf="@id/profileimage"
             android:layout_toRightOf="@id/profileimage"
             android:background="@drawable/ic_baseline_remove_24"
-            android:backgroundTint="@color/error_red"/>
+            android:backgroundTint="@color/error_red" />
 
     </RelativeLayout>
 

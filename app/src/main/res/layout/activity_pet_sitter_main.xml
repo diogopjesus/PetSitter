@@ -28,7 +28,8 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:layout_marginEnd="16dp"
-            app:menu="@menu/petsitter_bottom_nav_menu" />
+            app:menu="@menu/petsitter_bottom_nav_menu"
+            app:labelVisibilityMode="labeled"/>
     </com.google.android.material.bottomappbar.BottomAppBar>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

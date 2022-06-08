@@ -16,6 +16,14 @@ public class PetSitterMenuFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_pet_sitter_menu, container, false);
+
+        view.findViewById(R.id.menuMyProfile).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(view.getContext(), PetSitterProfileActivity.class));
+            }
+        });
+
         view.findViewById(R.id.logoutBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

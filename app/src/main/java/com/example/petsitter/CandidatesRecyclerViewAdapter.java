@@ -1,6 +1,7 @@
 package com.example.petsitter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,14 @@ public class CandidatesRecyclerViewAdapter extends RecyclerView.Adapter<Candidat
         String candidateName = candidateModel.get(position).getName();
 
         holder.candidateName.setText(candidateName);
+
+        holder.candidateName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                holder.itemView.getContext().startActivity(new Intent(holder.itemView.getContext(),
+                        CandidateProfileActivity.class));
+            }
+        });
     }
 
     @Override

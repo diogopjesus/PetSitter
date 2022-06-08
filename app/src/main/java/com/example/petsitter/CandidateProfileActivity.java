@@ -2,7 +2,9 @@ package com.example.petsitter;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class CandidateProfileActivity extends AppCompatActivity {
@@ -11,7 +13,8 @@ public class CandidateProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_candidate_profile);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setActionBar();
+        getSupportFragmentManager().beginTransaction().replace(R.id.candidateProfileFragment,new ProfileFragment()).commit();
     }
 
     @Override
@@ -23,5 +26,19 @@ public class CandidateProfileActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void setActionBar() {
+        ActionBar actionBar;
+        actionBar = getSupportActionBar();
+
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM|ActionBar.DISPLAY_SHOW_TITLE);
+
+        actionBar.setCustomView(R.layout.abs_layout);
+
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
+        TextView titleView = findViewById(R.id.absLayout);
+        titleView.setText("Candidate Profile");
     }
 }
