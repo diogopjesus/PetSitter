@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    android:outlineSpotShadowColor="@color/light_gray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profileimage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_baseline_person_24" />
+
+        <TextView
+            android:id="@+id/candidateName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/profileimage"
+            android:layout_toRightOf="@id/profileimage"
+            android:text="His Name"
+            android:textColor="@color/dark_gray"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/chooseCandidate"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="22dp"
+            android:layout_toEndOf="@id/profileimage"
+            android:layout_toRightOf="@id/profileimage"
+            android:background="@drawable/ic_baseline_how_to_reg_24"
+            android:backgroundTint="@color/maximum_green_500"/>
+
+        <TextView
+            android:id="@+id/sendMessageCandidate"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="22dp"
+            android:layout_toEndOf="@id/profileimage"
+            android:layout_toRightOf="@id/profileimage"
+            android:background="@drawable/ic_baseline_message_24"
+            android:backgroundTint="@color/dark_gray"/>
+
+        <TextView
+            android:id="@+id/removeCandidate"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="280dp"
+            android:layout_marginTop="22dp"
+            android:layout_toEndOf="@id/profileimage"
+            android:layout_toRightOf="@id/profileimage"
+            android:background="@drawable/ic_baseline_remove_24"
+            android:backgroundTint="@color/error_red"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

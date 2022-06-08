@@ -19,7 +19,7 @@
         <entry key="app/src/main/res/drawable/ic_transparent_background.xml" value="0.249" />
         <entry key="app/src/main/res/layout/abs_layout.xml" value="0.2046875" />
         <entry key="app/src/main/res/layout/activity_animal_page.xml" value="0.28559213339033773" />
-        <entry key="app/src/main/res/layout/activity_candidates.xml" value="0.19809610154125112" />
+        <entry key="app/src/main/res/layout/activity_candidates.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_dog_walking_request.xml" value="0.34791666666666665" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_pet_hosting_request.xml" value="0.3625" />
@@ -31,7 +31,8 @@
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.3625" />
         <entry key="app/src/main/res/layout/activity_user_profile.xml" value="0.28559213339033773" />
         <entry key="app/src/main/res/layout/card_animal.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/card_message.xml" value="0.49008498583569404" />
+        <entry key="app/src/main/res/layout/card_candidate.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/card_message.xml" value="0.25" />
         <entry key="app/src/main/res/layout/card_request.xml" value="0.3431952662721893" />
         <entry key="app/src/main/res/layout/fragment_animals.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_animals_recyclerview.xml" value="0.29791666666666666" />
