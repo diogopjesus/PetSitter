@@ -18,7 +18,7 @@ public class SignInActivity extends AppCompatActivity {
         findViewById(R.id.signUp_btn).setOnClickListener(view -> startActivity(new Intent(view.getContext(),SignUpActivity.class)));
 
         findViewById(R.id.login_btn).setOnClickListener(view -> {
-            if (userName.getText().toString().equals("alberto12345"))
+            if (userName.getText().toString().equals(""))
                 startActivity(new Intent(view.getContext(),PetOwnerMainActivity.class));
             else if (userName.getText().toString().equals("carlos12345"))
                 startActivity(new Intent(view.getContext(),PetSitterMainActivity.class));

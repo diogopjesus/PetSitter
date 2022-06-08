@@ -24,8 +24,10 @@
     </style>
 
     <style name="Theme.ActivitySecondary" parent="Theme.PetSitter">
+        <item name="android:statusBarColor">@color/blue_jeans_300</item>
         <item name="windowActionBar">true</item>
         <item name="windowNoTitle">false</item>
+        <item name="android:colorBackground">@color/white</item>
     </style>
 
     <style name="Theme.ActivityMain" parent="Theme.PetSitter">
@@ -54,5 +56,10 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">40dp</item>
         <item name="color">@color/white</item>
+    </style>
+
+    <style name="TextLabel" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textSize">16sp</item>
+
     </style>
 </resources>

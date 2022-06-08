@@ -4,172 +4,136 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/animalsButtonLayout"
+        android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:text="Select animal(s)"
-        android:fontFamily="@font/montserrat"
-        android:textColor="#4F4F4F"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:hint="Animal(s)"
+        app:hintTextAppearance="@style/TextLabel"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.052" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Spinner
-        android:id="@+id/animalsSpinner"
-        android:layout_width="330dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/rounded_corner"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.469"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        <AutoCompleteTextView
+            android:id="@+id/animalListTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@android:drawable/arrow_down_float"
+            android:inputType="none"
+            android:padding="16dp"
+            android:textColor="@color/dark_gray"
+            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dateStartButtonLayout"
+        android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/montserrat"
-        android:text="From"
-        android:textColor="#4F4F4F"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/animalsSpinner" />
+        android:layout_marginTop="16dp"
+        android:hint="Start Date"
+        app:hintTextAppearance="@style/TextLabel"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/animalsButtonLayout">
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
+        <AutoCompleteTextView
+            android:id="@+id/dateStartPickerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@android:drawable/arrow_down_float"
+            android:inputType="none"
+            android:padding="16dp"
+            android:textColor="@color/dark_gray"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dateEndButtonLayout"
+        android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="24dp"
-        android:text="Until"
-        android:fontFamily="@font/montserrat"
-        android:textColor="#4F4F4F"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.108"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/animalsSpinner" />
+        android:layout_marginTop="16dp"
+        android:hint="End Date"
+        app:hintTextAppearance="@style/TextLabel"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateStartButtonLayout">
 
-    <EditText
-        android:id="@+id/from"
-        android:layout_width="125dp"
-        android:layout_height="30dp"
-        android:background="@drawable/rounded_corner"
-        android:ems="10"
-        android:inputType="date"
-        android:textColor="#4F4F4F"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/until"
-        app:layout_constraintHorizontal_bias="0.469"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
-        app:layout_constraintVertical_bias="0.014" />
+        <AutoCompleteTextView
+            android:id="@+id/dateEndPickerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@android:drawable/arrow_down_float"
+            android:inputType="none"
+            android:padding="16dp"
+            android:textColor="@color/dark_gray"
+            android:textSize="16sp" />
 
-    <EditText
-        android:id="@+id/until"
-        android:layout_width="125dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="80dp"
-        android:background="@drawable/rounded_corner"
-        android:ems="10"
-        android:inputType="date"
-        android:textColor="#a6a6a6"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
-        app:layout_constraintVertical_bias="0.014" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/locationTextField"
+        android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Location"
-        android:fontFamily="@font/montserrat"
-        android:textColor="#4F4F4F"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/from" />
+        android:layout_marginTop="16dp"
+        android:hint="Location"
+        app:hintTextAppearance="@style/TextLabel"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateEndButtonLayout">
 
-    <EditText
-        android:id="@+id/location"
-        android:layout_width="330dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/rounded_corner"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textColor="#4F4F4F"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.469"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textColor="@color/dark_gray"
+            android:textSize="16sp"
+            />
 
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Details"
-        android:fontFamily="@font/montserrat"
-        android:textColor="#4F4F4F"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/location" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/details"
-        android:layout_width="330dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/rounded_corner"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textColor="#4F4F4F"
-        android:textSize="20dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/filledTextField"
+        android:layout_width="380dp"
+        android:layout_height="330dp"
+        android:layout_marginTop="16dp"
+        android:hint="Description"
+        app:expandedHintEnabled="false"
+        app:hintTextAppearance="@style/TextLabel"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+        app:layout_constraintTop_toBottomOf="@+id/locationTextField">
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#a6a6a6"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/details" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/requestDetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            android:textColor="@color/dark_gray" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/addPetHostingRequest"
-        android:layout_width="330dp"
-        android:layout_height="48dp"
-        android:background="@drawable/rounded_corner"
+        android:id="@+id/add_DogWalkingRequest"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_corner_button"
+        android:backgroundTint="@color/blue_jeans_300"
         android:fontFamily="@font/montserrat"
         android:text="Add Request"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"/>
+        app:layout_constraintTop_toBottomOf="@+id/filledTextField" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

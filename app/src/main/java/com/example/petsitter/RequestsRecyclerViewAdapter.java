@@ -43,7 +43,7 @@ public class RequestsRecyclerViewAdapter extends RecyclerView.Adapter<RequestsRe
         holder.requestCandidatesAvailable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                v.getContext().startActivity(new Intent(v.getContext(), PetSitterMainActivity.class));
+                v.getContext().startActivity(new Intent(v.getContext(), CandidatesActivity.class));
             }
         });
 
