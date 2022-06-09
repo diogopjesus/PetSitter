@@ -31,8 +31,7 @@ public class UpcomingFragment extends Fragment {
     }
 
     public void setUpRequestsModel(){
-        for (int i = 0; i < 10; i++) {
-            requestsModel.add(new RequestModel("Pet Sitting", "10/10/2001", "10:25"));
-        }
+        requestsModel.add(new RequestModel("Pet Hosting", "10/10/2001", "10:25"));
+        requestsModel.add(new RequestModel("Dog Walking", "10/10/2001", "10:25"));
     }
 }

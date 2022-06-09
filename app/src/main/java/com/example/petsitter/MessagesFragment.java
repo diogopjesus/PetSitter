@@ -31,8 +31,8 @@ public class MessagesFragment extends Fragment {
     }
 
     public void setUpMessagesModel(){
-        for (int i = 0; i < 15; i++) {
-            messagesModel.add(new MessageModel("Carlos", "Thank you!"));
-        }
+        messagesModel.add(new MessageModel("Carlos", "Thank you!"));
+        messagesModel.add(new MessageModel("Roberto", "See you later."));
+        messagesModel.add(new MessageModel("Artur", "Ok"));
     }
 }

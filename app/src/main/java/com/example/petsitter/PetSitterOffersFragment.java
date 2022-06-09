@@ -24,16 +24,17 @@ public class PetSitterOffersFragment extends Fragment {
 
         RecyclerView recyclerView = view.findViewById(R.id.offersRecyclerView);
         setUpRequestsModel();
-        PetSitterRequestsRecyclerViewAdapter adapter = new PetSitterRequestsRecyclerViewAdapter(view.getContext(), offersModel);
+        PetSitterRequestsRecyclerViewAdapter adapter = new PetSitterRequestsRecyclerViewAdapter(view.getContext(), offersModel, "Offers");
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
         return view;
     }
 
-    public void setUpRequestsModel(){
-        for (int i = 0; i < 4; i++) {
+    public void setUpRequestsModel() {
+        if (offersModel.size() < 2) {
             offersModel.add(new RequestModel("Pet Hosting", "10/10/2001", "10:00"));
+            offersModel.add(new RequestModel("Dog Walking", "10/10/2001", "10:00"));
         }
     }
 }

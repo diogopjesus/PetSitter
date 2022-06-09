@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/petSitterOffersFragment">
+    app:startDestination="@id/petSitterRequestsFragment">
     <fragment
         android:id="@+id/petSitterOffersFragment"
         android:name="com.example.petsitter.PetSitterOffersFragment"

@@ -23,7 +23,7 @@ public class PetSitterAppliedFragment extends Fragment {
 
         RecyclerView recyclerView = view.findViewById(R.id.appliedRecyclerView);
         setUpRequestsModel();
-        PetSitterRequestsRecyclerViewAdapter adapter = new PetSitterRequestsRecyclerViewAdapter(view.getContext(), upcomingModel);
+        PetSitterRequestsRecyclerViewAdapter adapter = new PetSitterRequestsRecyclerViewAdapter(view.getContext(), upcomingModel, "Applied");
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 
@@ -31,8 +31,8 @@ public class PetSitterAppliedFragment extends Fragment {
     }
 
     public void setUpRequestsModel(){
-        for (int i = 0; i < 3; i++) {
-            upcomingModel.add(new RequestModel("Pet Sitting", "10/10/2001", "10:25"));
-        }
+        upcomingModel.add(new RequestModel("Pet Hosting", "10/10/2001", "10:25"));
+        upcomingModel.add(new RequestModel("Dog Walking", "10/10/2001", "10:25"));
+
     }
 }

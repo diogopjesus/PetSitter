@@ -40,8 +40,9 @@ public class CandidatesRecyclerViewAdapter extends RecyclerView.Adapter<Candidat
         holder.candidateName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                holder.itemView.getContext().startActivity(new Intent(holder.itemView.getContext(),
-                        CandidateProfileActivity.class));
+                Intent intent = new Intent(view.getContext(), CandidateProfileActivity.class);
+                intent.putExtra("activity","CandidatesActivity");
+                view.getContext().startActivity(intent);
             }
         });
     }

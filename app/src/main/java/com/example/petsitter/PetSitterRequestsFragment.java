@@ -17,7 +17,7 @@ import com.google.android.material.tabs.TabLayoutMediator;
 
 public class PetSitterRequestsFragment extends Fragment {
 
-    private String[] titles = new String[]{"Applied", "Upcoming", "Past"};
+    private String[] titles = new String[]{"Booked", "Applied", "Past"};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -46,9 +46,9 @@ public class PetSitterRequestsFragment extends Fragment {
         public Fragment createFragment(int position) {
             switch (position) {
                 case 0:
-                    return new PetSitterAppliedFragment();
+                    return new PetSitterBookedFragment();
                 case 1:
-                    return new PetSitterUpcomingFragment();
+                    return new PetSitterAppliedFragment();
                 case 2:
                     return new PetSitterPastFragment();
             }

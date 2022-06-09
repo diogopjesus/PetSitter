@@ -54,7 +54,13 @@
 
     <style name="roundedImageView1">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">75dp</item>
+        <item name="cornerSize">100dp</item>
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="roundedImageView2">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">71dp</item>
         <item name="color">@color/white</item>
     </style>
 

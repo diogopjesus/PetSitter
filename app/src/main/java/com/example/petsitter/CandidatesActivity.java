@@ -54,8 +54,9 @@ public class CandidatesActivity extends AppCompatActivity {
     }
 
     public void setUpCandidatesModel(){
-        for (int i = 0; i < 7; i++) {
-            candidatesModel.add(new CandidateModel("Carlos"));
+        String[] names = {"Carlos", "Diogo", "Miguel", "Pedro", "João", "Filipe", "Renato", "Luís", "Tiago", "Frederico", "Ricardo"};
+        for (int i = 0; i < 11; i++) {
+            candidatesModel.add(new CandidateModel(names[i]));
         }
     }
 }

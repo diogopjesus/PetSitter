@@ -41,7 +41,7 @@ public class AnimalsFragment extends Fragment {
     }
 
     public void setUpAnimalsModel(){
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 1; i++) {
             animalsModel.add(new AnimalsModel("Tobi"));
         }
     }

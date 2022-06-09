@@ -21,10 +21,8 @@ import com.google.android.material.tabs.TabLayoutMediator;
 
 public class RequestsFragment extends Fragment {
 
-
     // tab titles
-    private String[] titles = new String[]{"Ongoing", "Upcoming", "Past"};
-    FragmentRequestsBinding binding;
+    private String[] titles = new String[]{"Booked", "Waiting", "Past"};
 
     FloatingActionButton mAddPetHosting, mAddPetSitting, mAddDogWalking;
 

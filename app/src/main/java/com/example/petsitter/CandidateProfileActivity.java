@@ -1,7 +1,9 @@
 package com.example.petsitter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
@@ -14,7 +16,15 @@ public class CandidateProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_candidate_profile);
         setActionBar();
-        getSupportFragmentManager().beginTransaction().replace(R.id.candidateProfileFragment,new ProfileFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.candidateProfileFragment, new ProfileFragment()).commit();
+
+        Intent intent = getIntent();
+        String activity = intent.getStringExtra("activity");
+
+        if (!activity.equals("CandidatesActivity")) {
+            findViewById(R.id.chooseCandidate).setVisibility(View.INVISIBLE);
+            findViewById(R.id.removeCandidate).setVisibility(View.INVISIBLE);
+        }
     }
 
     @Override

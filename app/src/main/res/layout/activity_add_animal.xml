@@ -213,7 +213,7 @@
                 android:background="@drawable/rounded_corner_button"
                 android:backgroundTint="@color/blue_jeans_300"
                 android:fontFamily="@font/montserrat"
-                android:text="Add Request"
+                android:text="Add Animal"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"

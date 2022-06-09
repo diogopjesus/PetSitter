@@ -31,8 +31,8 @@ public class PastFragment extends Fragment {
     }
 
     public void setUpRequestsModel(){
-        for (int i = 0; i < 10; i++) {
-            requestsModel.add(new RequestModel("Pet Sitting", "10/10/2001", "10:25"));
+        for (int i = 0; i < 1; i++) {
+            requestsModel.add(new RequestModel("Pet Sitting", "10/10/2001", "10:25", true, "Past"));
         }
     }
 }

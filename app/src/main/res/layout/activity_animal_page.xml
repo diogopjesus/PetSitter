@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.00"
-        app:shapeAppearanceOverlay="@style/roundedImageView1" />
+        app:shapeAppearanceOverlay="@style/roundedImageView2" />
 
     <TextView
         android:id="@+id/animalName"

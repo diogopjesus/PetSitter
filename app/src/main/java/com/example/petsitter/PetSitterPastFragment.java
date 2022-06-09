@@ -31,8 +31,8 @@ public class PetSitterPastFragment extends Fragment {
     }
 
     public void setUpRequestsModel(){
-        for (int i = 0; i < 3; i++) {
-            pastModel.add(new RequestModel("Pet Sitting", "10/10/2001", "10:25"));
+        for (int i = 0; i < 1; i++) {
+            pastModel.add(new RequestModel("Pet Hosting", "10/10/2001", "10:25"));
         }
     }
 }

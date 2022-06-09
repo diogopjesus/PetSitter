@@ -6,12 +6,27 @@ public class RequestModel {
     String requestTime;
     String requestCandidatesAvailable;
     String moreInfo;
+    boolean image;
 
+    public RequestModel(String requestType, String requestStartDate, String requestTime, boolean image, String requestDateType) {
+        this.requestType = requestType;
+        this.requestStartDate = requestStartDate;
+        this.requestTime = requestTime;
+        this.image = image;
+    }
+
+    public RequestModel(String requestType, String requestStartDate, String requestTime, boolean image) {
+        this.requestType = requestType;
+        this.requestStartDate = requestStartDate;
+        this.requestTime = requestTime;
+        this.image = image;
+    }
 
     public RequestModel(String requestType, String requestStartDate, String requestTime) {
         this.requestType = requestType;
         this.requestStartDate = requestStartDate;
         this.requestTime = requestTime;
+        this.image = false;
     }
 
     public String getRequestType() {
@@ -29,4 +44,6 @@ public class RequestModel {
     public String getRequestCandidatesAvailable() { return requestCandidatesAvailable; }
 
     public String getMoreInfo() { return moreInfo; }
+
+    public boolean isImage() { return image; }
 }

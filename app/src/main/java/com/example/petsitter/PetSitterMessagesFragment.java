@@ -32,7 +32,7 @@ public class PetSitterMessagesFragment extends Fragment {
     }
 
     public void setUpMessagesModel(){
-        for (int i = 0; i < 15; i++) {
+        for (int i = 0; i < 1; i++) {
             messagesModel.add(new MessageModel("Alberto", "I take 20 bucks for the service"));
         }
     }

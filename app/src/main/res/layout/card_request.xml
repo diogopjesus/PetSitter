@@ -37,6 +37,22 @@
                 android:src="@drawable/ic_baseline_person_24"
                 app:shapeAppearanceOverlay="@style/requestRoundedImageView" />
 
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/requestCandidateImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="top|left"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitCenter"
+                android:src="@drawable/petsitter_image"
+                app:shapeAppearanceOverlay="@style/requestRoundedImageView"
+                android:visibility="invisible"/>
+
             <TextView
                 android:id="@+id/requestCandidateName"
                 android:layout_width="92dp"
@@ -44,7 +60,7 @@
                 android:layout_gravity="left|center"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="42dp"
-                android:text="Roberto"
+                android:text="Carlos"
                 android:textAlignment="center"
                 android:textSize="15sp"
                 android:textStyle="bold"
@@ -99,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="148dp"
                 android:layout_marginTop="36dp"
-                android:text="Oliver, Tobi"
+                android:text="Tobi"
                 android:textAlignment="center"
                 android:textSize="13sp"
                 android:textStyle="bold"

@@ -3,9 +3,175 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".RequestPageActivity">
 
+    <TextView
+        android:id="@+id/requestTypeRequestPageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Request:"/>
+    <TextView
+        android:id="@+id/requestTypeRequestPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pet Sitting"
+        app:layout_constraintStart_toEndOf="@id/requestTypeRequestPageText"
+        android:textStyle="bold"/>
 
+    <TextView
+        android:id="@+id/ownerRequestPageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/requestTypeRequestPageText"
+        android:text="Owner:"/>
+    <TextView
+        android:id="@+id/ownerRequestPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alberto"
+        app:layout_constraintTop_toBottomOf="@id/requestTypeRequestPage"
+        app:layout_constraintStart_toEndOf="@id/ownerRequestPageText"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/animalsRequestPageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ownerRequestPageText"
+        android:text="Animals:"/>
+    <TextView
+        android:id="@+id/animalsRequestPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tobi"
+        app:layout_constraintTop_toBottomOf="@id/ownerRequestPage"
+        app:layout_constraintStart_toEndOf="@id/animalsRequestPageText"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/startDateRequestPageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/animalsRequestPageText"
+        android:text="Start Date:"/>
+    <TextView
+        android:id="@+id/startDateRequestPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="01/01/2020"
+        app:layout_constraintTop_toBottomOf="@id/animalsRequestPage"
+        app:layout_constraintStart_toEndOf="@id/startDateRequestPageText"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/endDateRequestPageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/startDateRequestPageText"
+        android:text="End Date:"/>
+    <TextView
+        android:id="@+id/endDateRequestPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="02/01/2020"
+        app:layout_constraintTop_toBottomOf="@id/startDateRequestPage"
+        app:layout_constraintStart_toEndOf="@id/endDateRequestPageText"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/timeRequestPageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/startDateRequestPageText"
+        android:text="Time:"
+        android:visibility="invisible"/>
+    <TextView
+        android:id="@+id/timeRequestPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16:30"
+        app:layout_constraintTop_toBottomOf="@id/startDateRequestPage"
+        app:layout_constraintStart_toEndOf="@id/endDateRequestPageText"
+        android:textStyle="bold"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/visitsRequestPageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/endDateRequestPageText"
+        android:text="Time:"
+        android:visibility="visible"/>
+    <TextView
+        android:id="@+id/visitsRequestPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16:30"
+        app:layout_constraintTop_toBottomOf="@id/endDateRequestPage"
+        app:layout_constraintStart_toEndOf="@id/visitsRequestPageText"
+        android:textStyle="bold"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/locationPetHostingRequestPageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/endDateRequestPageText"
+        android:text="Location:"
+        android:visibility="invisible"/>
+    <TextView
+        android:id="@+id/locationPetHostingRequestPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lisbon"
+        app:layout_constraintTop_toBottomOf="@id/endDateRequestPage"
+        app:layout_constraintStart_toEndOf="@id/visitsRequestPageText"
+        android:textStyle="bold"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/locationRequestPageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/locationPetHostingRequestPageText"
+        android:text="Location:"
+        android:visibility="visible"/>
+    <TextView
+        android:id="@+id/locationRequestPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lisbon"
+        app:layout_constraintTop_toBottomOf="@id/locationPetHostingRequestPage"
+        app:layout_constraintStart_toEndOf="@id/locationRequestPageText"
+        android:textStyle="bold"
+        android:visibility="visible"/>
+
+    <View
+        android:id="@+id/lineRequestsPage"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="400dp"
+        android:background="@color/light_gray"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/descriptionRequestPageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lineRequestsPage"
+        android:text="Description:"
+        android:visibility="visible"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/descriptionRequestPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Here goes the description"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionRequestPageText" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
