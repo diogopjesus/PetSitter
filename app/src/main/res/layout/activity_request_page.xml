@@ -1,176 +1,261 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".RequestPageActivity">
+    tools:context=".RequestPageActivity"
+    tools:layout_editor_absoluteX="-5dp"
+    tools:layout_editor_absoluteY="39dp">
+
+    <View
+        android:id="@+id/lineRequestsPage2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="68dp"
+        android:background="@color/light_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/requestTypeRequestPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text="Pet Sitting"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/requestTypeRequestPageText"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/requestTypeRequestPageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Request:"/>
-    <TextView
-        android:id="@+id/requestTypeRequestPage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pet Sitting"
-        app:layout_constraintStart_toEndOf="@id/requestTypeRequestPageText"
-        android:textStyle="bold"/>
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="16dp"
+        android:text="Request:"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/ownerRequestPageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/requestTypeRequestPageText"
-        android:text="Owner:"/>
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="16dp"
+        android:text="Owner:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lineRequestsPage2" />
+
     <TextView
         android:id="@+id/ownerRequestPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Alberto"
-        app:layout_constraintTop_toBottomOf="@id/requestTypeRequestPage"
-        app:layout_constraintStart_toEndOf="@id/ownerRequestPageText"
-        android:textStyle="bold"/>
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ownerRequestPageText"
+        app:layout_constraintTop_toBottomOf="@+id/lineRequestsPage2" />
 
     <TextView
         android:id="@+id/animalsRequestPageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/ownerRequestPageText"
-        android:text="Animals:"/>
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="10dp"
+        android:text="Animals:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ownerRequestPageText" />
+
     <TextView
         android:id="@+id/animalsRequestPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Tobi"
-        app:layout_constraintTop_toBottomOf="@id/ownerRequestPage"
-        app:layout_constraintStart_toEndOf="@id/animalsRequestPageText"
-        android:textStyle="bold"/>
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/animalsRequestPageText"
+        app:layout_constraintTop_toBottomOf="@id/ownerRequestPage" />
 
     <TextView
         android:id="@+id/startDateRequestPageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/animalsRequestPageText"
-        android:text="Start Date:"/>
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="92dp"
+        android:text="Start Date:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/animalsRequestPageText" />
+
     <TextView
         android:id="@+id/startDateRequestPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="01/01/2020"
-        app:layout_constraintTop_toBottomOf="@id/animalsRequestPage"
-        app:layout_constraintStart_toEndOf="@id/startDateRequestPageText"
-        android:textStyle="bold"/>
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/startDateRequestPageText"
+        app:layout_constraintTop_toBottomOf="@+id/animalsRequestPage" />
+
+    <TextView
+        android:id="@+id/endDateRequestPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="02/01/2020"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/endDateRequestPageText"
+        app:layout_constraintTop_toBottomOf="@id/startDateRequestPage" />
 
     <TextView
         android:id="@+id/endDateRequestPageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/startDateRequestPageText"
-        android:text="End Date:"/>
-    <TextView
-        android:id="@+id/endDateRequestPage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="02/01/2020"
-        app:layout_constraintTop_toBottomOf="@id/startDateRequestPage"
-        app:layout_constraintStart_toEndOf="@id/endDateRequestPageText"
-        android:textStyle="bold"/>
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:text="End Date:"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/startDateRequestPageText" />
 
     <TextView
         android:id="@+id/timeRequestPageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/startDateRequestPageText"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="10dp"
         android:text="Time:"
-        android:visibility="invisible"/>
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/startDateRequestPageText" />
+
     <TextView
         android:id="@+id/timeRequestPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="16:30"
-        app:layout_constraintTop_toBottomOf="@id/startDateRequestPage"
-        app:layout_constraintStart_toEndOf="@id/endDateRequestPageText"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:visibility="invisible"/>
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/timeRequestPageText"
+        app:layout_constraintTop_toBottomOf="@id/startDateRequestPage" />
 
     <TextView
         android:id="@+id/visitsRequestPageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/endDateRequestPageText"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="10dp"
         android:text="Time:"
-        android:visibility="visible"/>
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/endDateRequestPageText" />
+
     <TextView
         android:id="@+id/visitsRequestPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="16:30"
-        app:layout_constraintTop_toBottomOf="@id/endDateRequestPage"
-        app:layout_constraintStart_toEndOf="@id/visitsRequestPageText"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:visibility="visible"/>
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@id/visitsRequestPageText"
+        app:layout_constraintTop_toBottomOf="@id/endDateRequestPage" />
 
     <TextView
         android:id="@+id/locationPetHostingRequestPageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/endDateRequestPageText"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="10dp"
         android:text="Location:"
-        android:visibility="invisible"/>
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/endDateRequestPageText" />
+
     <TextView
         android:id="@+id/locationPetHostingRequestPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Lisbon"
-        app:layout_constraintTop_toBottomOf="@id/endDateRequestPage"
-        app:layout_constraintStart_toEndOf="@id/visitsRequestPageText"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:visibility="invisible"/>
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/locationPetHostingRequestPageText"
+        app:layout_constraintTop_toBottomOf="@id/endDateRequestPage" />
 
     <TextView
         android:id="@+id/locationRequestPageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/locationPetHostingRequestPageText"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="10dp"
         android:text="Location:"
-        android:visibility="visible"/>
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/locationPetHostingRequestPageText" />
+
     <TextView
         android:id="@+id/locationRequestPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Lisbon"
-        app:layout_constraintTop_toBottomOf="@id/locationPetHostingRequestPage"
-        app:layout_constraintStart_toEndOf="@id/locationRequestPageText"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:visibility="visible"/>
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@id/locationRequestPageText"
+        app:layout_constraintTop_toBottomOf="@id/locationPetHostingRequestPage" />
 
     <View
         android:id="@+id/lineRequestsPage"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="16dp"
         android:background="@color/light_gray"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationRequestPage"
         tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/descriptionRequestPageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/lineRequestsPage"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
         android:text="Description:"
+        android:textSize="23dp"
+        android:textStyle="bold"
         android:visibility="visible"
-        android:textStyle="bold"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lineRequestsPage" />
 
     <TextView
         android:id="@+id/descriptionRequestPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
         android:text="Here goes the description"
         android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/descriptionRequestPageText" />
 
 
